@@ -26,6 +26,7 @@
 \newtheorem{defn}{Definition}
 \newtheorem{ans}{Answer}
 \newtheorem{prop}{Property}
+\newtheorem{propn}{Proposition}
 \newtheorem{claim}{Claim}
 
 \newcommand{\up}[1]{\ensuremath{^\text{#1}}}
@@ -40,6 +41,7 @@
 \newcommand{\qed}{\ensuremath{\Box}}
 \newcommand\bpf[1][]{\smallskip\noindent{\bf Proof#1.}\quad}
 \newcommand\epf{\qed\medskip}
+\newcommand\hr{\bigskip\hrule\bigskip}
 
 \begin{document}
 
@@ -119,16 +121,106 @@ Pandora's box that is {\em what is truth?} This is the box we'll open.
 
 \section{Definitions of Truth}
 
+\subsection{Correspondence Truth}
+
 Truth is a concept so fundamental to human thinking that it's elusive to define
 in simpler terms.
 Perhaps the most traditional approach has been an idea called
 {\em correspondence theory}\/:
 
-\begin{defn}[Correspondence Truth]
+\begin{defn}[Correspondence Truth]\label{d1}
     An idea is true when it corresponds to reality.
 \end{defn}
 
-I don't think this is a good definition, and I'll show you why I think so.
+I don't think this is a good definition.
+
+Pretend we're defining the mathematical idea of a {\em number}, and we said
+``a number is an element of the set of numbers.'' This definition of a number
+has a lot in common with the correspondence definition of truth:
+\begin{itemize}
+    \item it relies on another concept ({\em the set of numbers})
+        which is more complicated than the thing
+        being defined, 
+    \item it doesn't add much intuition about the thing being defined, and
+    \item it's not an easily testable definition. That is, we don't have a nice
+        way to test if a thing is a number or not, in the context of not yet
+        knowing a lot about the {\em set of numbers}.
+\end{itemize}
+
+On a metalevel, notice that we're doing something interesting here --- we're
+looking for the definition of an idea that we already intuitively understand.
+How will we know when we have a good definition? Abstractly, when the definition
+appeals to our intuition.
+Examples of the concept being defined ought to fit well with our
+proposed definition.
+
+% XXX Do I want to include this paragraph? It's a little digression from the
+%     main line of thought.
+I can't help but notice that this process of finding a definition is a case of
+knowledge discovery which does not fit well with the traditional scientific
+method --- although we could, with some creativity, treat concept examples as
+experiments or observations, and consider a definition as a hypothesis.
+
+With that in mind, let's consider an interesting proposition, something that we
+think of as a candidate for being true:
+\begin{propn}\label{p1}
+    If Plato were alive today, he would like pizza more than sushi.
+\end{propn}
+
+The correspondence definition of truth fails to shed light
+on the truth or falsity of this proposition.
+The fact is that Plato is not alive today, and --- for all practical purposes
+--- we have no way to determine what kinds of modern food he would most like.
+What we could do is make educated guesses, and try to convince each other
+that one of these guesses is more likely to be correct. But this method is
+disconnected from an examination of reality. If we take a careful look at how we
+decide something is true or false, then perhaps we can arrive at an improved
+definition of truth.
+
+Learning from the weakness of definition \ref{d1}, a good definition:
+\begin{itemize}
+    \item Relies on prior concepts,
+    \item adds intuition, and
+    \item helps test if something fits the definition.
+\end{itemize}
+
+\subsection{Different Kinds of Truths}
+
+
+
+\hr
+
+Notes for section 2.
+
+It's like saying a number is an element of the set of numbers.
+It hasn't helped us understand anything, and it feels like it's
+defined in terms of more complex ideas rather than in terms of
+something simpler. It offers us little in the way of testability.
+
+Metanote that we're doing something interesting in finding a philosophical
+definition. It's like we're looking for a way to describe something that
+we already know, as opposed to a definition in math literature, where, when
+learning, the definition comes first (for the student), and the intuition often
+follows after.
+
+Segue to the next section? The next section will introduce different types of
+truth. Which steak would Einstein have liked better? It's a weird kind of
+question because it's hard to test, yet it feels like it still has a true
+answer. I'm mentioning this example because I'm trying to show a difference
+between corresponding to reality and the way we actually work with certain
+claims.
+
+What I'm moving toward here is that I'm aiming for properties that are nice to
+have in a good definition.
+
+It's nice if a definition adds intuition to the thing being defined. For
+example, can we understand how this concept is useful, or how it historically
+evolved. It's nice if the definition gives a way to test if something fits the
+definition, and if the definition is built in terms of concepts that we can
+understand before we understand the defined idea.
+
+\hr
+
 
 One way to try on definitions or theories is to see how they work with examples,
 so in this article I'll provide examples of candidate truths --- things which

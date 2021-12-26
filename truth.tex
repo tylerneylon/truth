@@ -138,11 +138,11 @@ Pretend we're defining the mathematical idea of a {\em number}, and we said
 ``a number is an element of the set of numbers.'' This definition of a number
 has a lot in common with the correspondence definition of truth:
 \begin{itemize}
-    \item it relies on another concept ({\em the set of numbers})
+    \item It relies on another concept ({\em the set of numbers})
         which is more complicated than the thing
         being defined, 
-    \item it doesn't add much intuition about the thing being defined, and
-    \item it's not an easily testable definition. That is, we don't have a nice
+    \item It doesn't add much intuition about the thing being defined, and
+    \item It's not an easily testable definition. That is, we don't have a nice
         way to test if a thing is a number or not, in the context of not yet
         knowing a lot about the {\em set of numbers}.
 \end{itemize}
@@ -172,20 +172,82 @@ on the truth or falsity of this proposition.
 The fact is that Plato is not alive today, and --- for all practical purposes
 --- we have no way to determine what kinds of modern food he would most like.
 What we could do is make educated guesses, and try to convince each other
-that one of these guesses is more likely to be correct. But this method is
-disconnected from an examination of reality. If we take a careful look at how we
+that one of these guesses is more likely to be correct.
+This method is only loosely connected with an examination of reality.
+If we take a careful look at how we
 decide something is true or false, then perhaps we can arrive at an improved
 definition of truth.
 
 Learning from the weakness of definition \ref{d1}, a good definition:
 \begin{itemize}
     \item Relies on prior concepts,
-    \item adds intuition, and
-    \item helps test if something fits the definition.
+    \item Adds intuition, and
+    \item Helps test if something fits the definition.
 \end{itemize}
 
 \subsection{Different Kinds of Truths}
 
+When we start to look at {\em how} we decide something is true, we see a number
+of different methods. In this section I'll describe kinds of truths classified
+in this way. I'm not sure if this list is exhaustive, although it covers all of
+the examples I've considered so far.
+
+As a mathematician, I'd like to start with:
+
+\begin{defn}[Mathematical Truth]
+    A mathematical idea is true when we can provide a logically sound proof for
+    it.
+\end{defn}
+
+As a brief reminder, a {\em sound argument} is a series of logical statements in
+which the conclusion must logically follow from the premises, and in which the
+premises are true in the context of the statement being proven.
+
+The math-loving part of me would like to say that a proven mathematical idea
+achieves a kind of ideal level of truthiness. But in practice, this isn't quite
+right. There are a number of reasons why mathematical ideas don't typically
+achieve ``perfect truth:''
+\begin{itemize}
+    \item Math relies fundamentally on axioms being true, but those axioms are
+        not proven. They are presented as self-evident, and in practice they
+        have subtle and non-trivial consequences.
+        One example is a geometric axiom called Euclid's parallel postulate,
+        which states that, given a line and a point, there is a unique line
+        through the point parallel to the line. If we assume this is true, then
+        we can arrive at laws of geometry on a flat surface. If we assume this
+        is false, then we can arrive at {\em equally valid} laws of geometry on
+        non-flat surfaces, such as the surface of a sphere. The point here is to
+        show that, as much as we'd like axioms to be self-evident, they aren't
+        always so.
+    \item Virtually all mathematical proofs are not actually fully formal
+        arguments. That is, math literature is written for human consumption,
+        and consists of largely natural language persuasion, as opposed to a
+        computationally-verifiable proof. In practice, we sometimes find
+        mistakes or omissions in these proofs, and they can be quite subtle. For
+        example, mathematicians have famously disagreed about the correctness of
+        Camille Jordan's original proof of the Jordan curve theorem.
+        When experts disagree about the correctness of a proof, it shows that it
+        can be quite difficult to see whether a proof is truly correct!
+    \item Finally, even the rules of logic themselves are subject to debate. If
+        we truly want to assume nothing, then it would be good to {\em know} we
+        are using the correct rules of logic, rather than to assume them. This
+        is not mere philosophical skepticism --- this is a known loophole in the
+        aspired perfection of mathematical reasoning. A proof by contradiction
+        only makes sense if we know the axioms themselves do not contradict each
+        other --- when we have non-contradicting axioms, they're called {\em
+        consistent}. The tricky thing is, mathematicians are unable to prove
+        that some important axiom systems are consistent without resorting to
+        additional axioms. When we add new axioms, though, we have to prove the
+        consistency of the new axioms. And, although this fact is not obvious,
+        this process can never end --- we can never {\em prove} the consistency
+        of a set of axioms --- when we're talking about number
+        systems.\footnote{For the curious: I'm referring to G\"odel's second
+        incompleteness theorem as applied to Peano arithmetic.}
+\end{itemize}
+
+% TODO State, either before or after this math part, what I'm getting at in the
+% big picture. Something like we think these things are true, but we don't have
+% as much certainty as we'd like.
 
 
 \hr

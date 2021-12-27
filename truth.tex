@@ -204,7 +204,7 @@ which the conclusion must logically follow from the premises, and in which the
 premises are true in the context of the statement being proven.
 
 The math-loving part of me would like to say that a proven mathematical idea
-achieves a kind of ideal level of truthiness. But in practice, this isn't quite
+achieves an ideal level of truthiness. But in practice, this isn't quite
 right. There are a number of reasons why mathematical ideas don't typically
 achieve ``perfect truth:''
 \begin{itemize}
@@ -219,7 +219,7 @@ achieve ``perfect truth:''
         non-flat surfaces, such as the surface of a sphere. The point here is to
         show that, as much as we'd like axioms to be self-evident, they aren't
         always so.
-    \item Virtually all mathematical proofs are not actually fully formal
+    \item Virtually all mathematical proofs are not fully formal
         arguments. That is, math literature is written for human consumption,
         and consists of largely natural language persuasion, as opposed to a
         computationally-verifiable proof. In practice, we sometimes find
@@ -230,24 +230,50 @@ achieve ``perfect truth:''
         can be quite difficult to see whether a proof is truly correct!
     \item Finally, even the rules of logic themselves are subject to debate. If
         we truly want to assume nothing, then it would be good to {\em know} we
-        are using the correct rules of logic, rather than to assume them. This
-        is not mere philosophical skepticism --- this is a known loophole in the
-        aspired perfection of mathematical reasoning. A proof by contradiction
-        only makes sense if we know the axioms themselves do not contradict each
-        other --- when we have non-contradicting axioms, they're called {\em
-        consistent}. The tricky thing is, mathematicians are unable to prove
-        that some important axiom systems are consistent without resorting to
-        additional axioms. When we add new axioms, though, we have to prove the
-        consistency of the new axioms. And, although this fact is not obvious,
-        this process can never end --- we can never {\em prove} the consistency
-        of a set of axioms --- when we're talking about number
-        systems.\footnote{For the curious: I'm referring to G\"odel's second
+        are using the correct rules of logic, rather than to assume them.
+        You may feel secure that our time-tested rules of logic make sense ---
+        but there's surprisingly good reason to question some proof techniques.
+
+        I'll focus, as an example, on proof by contradiction.
+        A proof by contradiction
+        only makes sense if we know the axioms being used do not contradict each
+        other. When we have non-contradicting axioms, they're called {\em
+        consistent}.
+
+        Here's the catch: mathematicians can't prove that some key axioms are
+        consistent --- at least not until they rely on {\em new axioms} for such
+        a proof. But when you add a new axiom, you no longer know that the
+        larger set of axioms is consistent! What we'd love is a single set of
+        axioms $A$ where we can prove, using only the axioms of $A$, that our
+        axioms are consistent. That way we can simultaneously believe all the
+        proofs of $A$, as
+        well as the proof that $A$ is consistent. Unfortunately, this is
+        logically impossible for modern number
+        systems.\footnote{For
+        the curious: I'm referring to G\"odel's second
         incompleteness theorem as applied to Peano arithmetic.}
 \end{itemize}
 
-% TODO State, either before or after this math part, what I'm getting at in the
+% State, either before or after this math part, what I'm getting at in the
 % big picture. Something like we think these things are true, but we don't have
 % as much certainty as we'd like.
+
+% Notice these things: We act as if we know mathematical ideas to be certainly
+% correct, but we don't really. I'm not saying they're all wrong, but rather,
+% that, especially as the ideas become more intricate, that we could easily be
+% making mistakes along the way, or that we could be making assumptions without
+% fully appreciating the implications of the assumptions we've made. Math is not
+% black-and-white. It has fundamentally subjective components --- always.
+
+
+
+
+
+
+%
+% ______________________________________________________________________
+% Some big-picture notes.
+%
 
 % Where are we going with the big picture of this section?
 %  The next couple sections are: defining invention and arbitrariness.
@@ -271,6 +297,9 @@ achieve ``perfect truth:''
 %   our limitations. They cannot be intrinsic properties of the universe because
 %   the universe does not have goals or questions.
 
+%
+% ______________________________________________________________________
+%
 
 \hr
 

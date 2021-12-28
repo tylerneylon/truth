@@ -11,6 +11,7 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{refcount}
+\usepackage{gensymb}
 
 \hypersetup{
     colorlinks=true,
@@ -28,6 +29,7 @@
 \newtheorem{prop}{Property}
 \newtheorem{propn}{Proposition}
 \newtheorem{claim}{Claim}
+\newtheorem{obs}{Observation}
 
 \newcommand{\up}[1]{\ensuremath{^\text{#1}}}
 
@@ -272,18 +274,119 @@ subjective --- standard for what will convince them.
 This is the theme I'm asking you to notice as we examine different kinds of
 truth: That there is uncertainty everywhere we look. I'll phrase this as:
 
-\begin{claim}
+\begin{obs}
     For every concept presented as a truth, there is a corresponding reason
     given to believe in the concept, such as a mathematical proof, a reference
     to a scientific experiment, or an appeal based on expertise.
 
-    When we examine these reasons, we always find uncertainty.
-\end{claim}
+    When we examine these reasons, we find uncertainty.
+\end{obs}
 
 I'm not saying the ideas are always incorrect. I am saying that when we think we
 {\em know} something is true, it's more honest to say that we {\em guess} it is
 true. I'll come back to this high level after looking at a few more kinds of
 truth.
+
+If math is the most pure form of {\em abstract} truth I can imagine, then the
+most pure form of {\em practical} truth must be concepts from physics that are
+based on repeatable experiments:
+
+\begin{defn}[Verifiable Truth]
+    A verifiable idea is true when we can take an action whose outcome can
+    distinguish between the truth or falsity of the idea.
+\end{defn}
+
+As an example, consider the idea that water boils at 100\degree C.
+We can boil some water with a thermometer to test this. Of course,
+if we were to try this experiment in a setting with high or low air pressure, we
+would find the boiling point to be slightly different. So it turns out that
+there are other variables to account for in repeating an experiment ---
+variables that we may not be aware of.
+
+In considering mathematical truth, we found many sources of uncertainty.
+Do all verifiable truths also contain uncertainty?
+
+Let's try to imagine a highly specific verifiable claim, one where we can
+account for all the relevant variables. If we can find such a claim, then we
+could get a result that would always, without exception, be completely
+consistent with the claim. If the result is based purely in logic, then we are
+back to our concerns with mathematical truth, so this is only a new idea if we
+think about physical experiments.
+
+Let's imagine that one day we completely understand the laws of physics.
+Further, let's imagine that there turn out to be quite simple rules, and that
+all of the physical principles we use in practice, such as Newton's laws of
+mechanics, are emergent properties of the simple rules. Suppose, for example,
+that we lived in a universe based on Conway's game of life. This is a 2d world
+of binary ``cells,'' each one being on or off in a given time step; each time
+step is discrete (time moves forward frame by frame, as opposed to
+continuously), and there is a set of rules to determine each time step from the
+previous one.
+
+% TODO XXX Clarify that I'll use the word "claim" for truth-bearers.
+
+In such a world, we can make an extremely strong physics-based claim, such as:
+\begin{claim}
+    Cell $x$ will be on in the next time step if and only if 3 or 4 neighboring
+    cells are on in the previous time step.
+\end{claim}
+
+How could such a claim have any uncertainty at all to it?
+
+Unfortunately, it can. Even if we do one day discover laws of physics that
+explain every single experimental result or observation throughout all of human
+experience, we're still making two fundamental assumptions:
+\begin{itemize}
+    \item We're assuming that any laws of physics at all exist.
+    \item We're assuming not only that laws of physics exist, but that they
+        remain unchanged throughout all of time.
+\end{itemize}
+As much as we may {\em believe} these assumptions are true, we do not truly {\em
+know}, with certainty, that they must be true.
+
+However much we understand the present, we know nothing about
+the future with certainty.
+
+The idea of verifiable truth is so general that we could consider using it as
+{\em the} definition of truth. I see the appeal of this, but I don't think it's
+quite right because it glosses over the other kinds of truth that I'll talk
+about. For example, mathematicans simply do not accept a theorem to be true no
+matter how many times you test it and find it to be true --- they require
+something beyond repeated experimentation. And there are other interesting
+concepts which we call true, and which do not comfortably fit under the umbrella
+of verifiability. Consider, for example, the claim:
+\begin{claim}\label{c1}
+    Han shot first.
+\end{claim}
+This is in reference to Han Solo's encounter with the bounty hunter Greedo in
+Mos Eisley, as depicted in the 1977 film {\em Star Wars}.
+In the original version of the film, Han Solo clearly shot Greedo before Greedo
+fired at Han, but in later, edited, versions of the film, Greedo either shot at
+Han first or nearly simultaneously.
+
+I don't think claim \ref{c1} is verifiable in the same way as the claim that
+water boils at 100\degree C.
+It's an interesting claim because its
+truth is non-obvious. It is about a fictional event in a widely-known
+fictional story. For many stories, we could simply ask the author, since the
+author has a kind of authority over what ``really happened'' in the story they
+created. But in this case, the story of {\em Star Wars} has effectively
+graduated to a level of American mythology, in which case the authorship of a
+single living person (George Lucas, in this case) is less meaningful.
+Furthermore, the owner of the rights to the film, Disney, is no longer strongly
+associated with the original author. We're examining a new kind of truth:
+\begin{defn}[Authoritative Truth]
+    A narrative idea is true when the party recognized as the authority on the
+    narrative claims the idea to be correct.
+\end{defn}
+
+We could ask if Harry Potter likes cilantro. This question is not addressed in
+any of the writings of author J.K.~Rowling. However, if she were to publicly
+declare the answer one way or another, it would be accepted as canonically true.
+Just as much as we accept the statement ``Darth Vader is Luke's father,'' we
+would also accept ``Harry Potter loathes cilantro.''
+
+
 
 % Some metathoughts
 % 1) How does all of this relate to realism vs anti-realism?

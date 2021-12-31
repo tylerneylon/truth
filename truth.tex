@@ -19,6 +19,11 @@
     urlcolor=cyan,
 }
 
+\newtheorem{innercustomthm}{Answer}
+\newenvironment{answer}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
 \newtheorem{thm}{Theorem}
 \newtheorem{conj}{Conjecture}
 \newtheorem{question}{Question}
@@ -458,14 +463,15 @@ the majority already treats as the correct decision:
     to be true.
 \end{defn}
 
-I wonder how certain social conventions began. Did a monarch one day
+It's not always obvious how democratic truths form.
+Did a monarch one day
 see a fork on the right of her plate, felt funny about it, and decapitate her
 table-setting staff members? And from that day forth, forks were carefully
 placed on the left?
 
 This possible fork-on-the-left origin story is an example of an idea being
 decided by a single individual.
-In some rare cases, it does seem as if one person determines a
+In some rare cases, it does seem as if a single point of history determines a
 convention.
 Consider the sandwich.
 The word {\em sandwich}, referring to food, is distinctly traceable to John
@@ -476,16 +482,22 @@ the trick.
 
 More often, it appears that conventions evolve slowly. Rather than arising from
 a single conscious decision, they appear to be an accumulation of natural
-smaller steps --- with reasons behind each step.
+smaller steps, with a reason behind each step.
 These might not always be {\em good} reasons,
-but surprisingly often
-when you examine the history of a concept, you find things that make more sense
+but
+when you examine the history of a concept,
+you often find more sense
 than you might expect. Newts were once ewts; when people saw one they would tell
 their friend they saw ``an ewt,'' which was so easy to confuse with ``a newt''
 that the word changed. People once considered the Mediterranean Sea to be the
-sea in the middle (medi) of the earth (terran). I don't think a single person
-generally decides which word a society will accept, or which concepts will
-survive over time. All of this is leading up to a powerful kind of truth:
+sea in the middle (medi) of the earth (terran).
+
+In the examples above, we're seeing ideas, like words, that live in multitudes
+among communities --- such as French words in France, or mathematical lingo
+among mathematicians. These ideas shift and adapt as the world changes.
+Some ideas receive more attention while others, apparently less useful, dwindle.
+This brings us to another perspective on truth that's worth
+consideration in its own right:
 \begin{defn}[Evolutionary Truth]
     A communal concept is true when the persistence of that concept corresponds
     with the persistence of the community.
@@ -496,21 +508,26 @@ convince us that the concept corresponds to reality, and this may irk your
 intuition. Yet every good idea does meet this definition.
 For example, if one community believes in germs, and another
 doesn't, then over time the germ-believing community is more likely to survive,
-and the idea of germs with them. We can think of ideas as the genes of the
-community. They mutate and change over time, and the theory of natural selection
+and the idea of germs with them.
+Ideas are the social genes of the community.
+They mutate and change over time, and the theory of natural selection
 applies to the ideas just as they do to traditional genes in a species.
 
 At the same time that good ideas tend to be evolutionary truths, there's room
-for other ideas to tag along for the ride. Many beliefs of organized religion
-seem to fit into this category. Historically, one could argue that religion
-helped communities by encouraging them to work together, to help each other
+for other ideas to tag along for the ride.
+While good ideas are evolutionary truths because they promote survival, other
+ideas may count as evolutionary truths simply because they are good at
+keeping themselves alive, rather than keeping the community alive.
+Some beliefs of organized religion seem to fit into this category.
+Religion historically helped communities
+by encouraging them to work together, to help each other
 out, and to remain organized. Those are genuine benefits. Along with those
 benefits came ideas that do not correspond with reality, nor do they confer
 verifiability or utility in practical decisions. For example, the belief that
 Zeus exists as a god, and is the son of the titans Cronus and Rhea.
 
 You might say that these religious beliefs are authoritative truths, but people
-who see such ideas as real would disagree. Authoritative truths are recognized
+who see such ideas as real would disagree; authoritative truths are recognized
 as fictional.
 
 Just as there is uncertainty in previous kinds of truth, there is uncertainty
@@ -523,8 +540,75 @@ As we work through these kinds of truth, it's tempting to ask:
 \end{question}
 In other words, is one of our definitions the {\em main} definition, with the
 others describing subsets of truths? I'll suggest several nuanced answers to
-this question.
+this question. First I'll argue that:
+\begin{answer}{3a.}
+    When we seek to describe the truths that groups of people tend to believe,
+    then we're talking about evolutionary truth.
+\end{answer}
 
+This answer is almost tautological in the sense that I'm aligning the context of
+the answer with the definition of evolutionary truth. I still think there's
+an interesting thought here: we're taking the vast wealth of thought about
+biological evolution and seeing that it applies to what we accept as true. This
+is mostly an old idea in the sense that biologists such as W.D.~Hamilton and
+Richard Dawkins have previously considered evolution as applying to ideas in
+addition to the traditional biological settings.
+
+Based on this perspective, humans
+may deserve less credit than we tend to give ourselves for having many
+brilliant ideas. Just as evolution has ``invented'' life, flight, eyeballs and
+brains without individual insights, perhaps the simple mechanism of billions of
+people guessing-and-checking many possibilities deserves some
+credit for human innovation.
+
+While I think evolutionary truth captures the {\em descriptive} idea of
+what ends up getting believed, I think it is not a {\em normative} idea of what
+we intuitively feel is true. In other words, evolutionary truth is talking more
+about how ideas survive than about what an all-knowing being would agree with.
+And our intuition for what's true is closer to this all-knowing thought
+experiment.
+
+This brings me to the last kind of truth I'd like to describe:
+\begin{defn}[Effective Truth]
+    A useful idea is true if someone using it tends to achieve their goals by
+    doing so.
+\end{defn}
+
+For example, suppose you believe that red bowling balls are luckier than any
+other color. It just so happens that your red bowling ball fits your hand better
+than others that are available to you. In this case, your belief helps you to
+achieve higher bowling scores, so it is effectively true.
+I've chosen this example to pique your sense of imperfection, but next I'll
+argue that all of our ideas are like this; that is, I don't think the
+imperfection is in this definition, but is a necessary property of truth itself.
+
+Consider the simple and useful formula:
+\begin{claim}[Newton's second law]
+    $F = m \cdot a.$
+\end{claim}
+
+Unlike your belief that red bowling balls are lucky, this idea probably feels
+unsuperstitious and reasonable. Here's the thing: it's not true.
+Newton's laws only apply to non-tiny
+objects that are moving at what you might call non-relativistic (not too fast)
+speeds. Even in those cases where they do apply,
+it turns out Newton's laws are only
+approximations that tend to be close to the truth.
+
+How is Newton's second law really different from the idea that red bowling balls
+are
+lucky? There is a difference in that, if we were to scientifically explore both,
+we'd find one of them is, as an approximation, correct much more often than the
+other. Can we say that one is true and the other is false? I don't think so;
+both will fail to be perfectly true in many experiments.
+
+What we end up with instead is a way to evaluate different shades of truthiness.
+We also find that this kind of truth does not live in a vacuum; it makes
+sense only in the context of goals. A ``very true'' useful idea, in the context
+of a certain goal, will achieve that goal almost every time. If a goal can
+almost never be achieved, then we may still care about ``slightly true'' ideas
+---
+ones which achieve their goal only a small percentage of the time.
 
 
 

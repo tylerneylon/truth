@@ -35,6 +35,7 @@
 \newtheorem{propn}{Proposition}
 \newtheorem{claim}{Claim}
 \newtheorem{obs}{Observation}
+\newtheorem{argt}{Argument}
 
 \newcommand{\up}[1]{\ensuremath{^\text{#1}}}
 
@@ -112,11 +113,11 @@ excellence.
 
 All of this leads to the big question:
 
-\begin{question}\label{q2}
+\begin{question}\label{q3}
     How can we learn what is true?
 \end{question}
 
-Question \ref{q2} can help us evolve how we learn.
+Question \ref{q3} can help us evolve how we learn.
 It helps us to better understand and to build on what we call our
 scientific method.
 It may even
@@ -552,7 +553,7 @@ cannot all be correct at the same time.
 \subsection{Which definition is right?}
 
 As we work through these kinds of truth, it's tempting to ask:
-\begin{question}\label{q1}
+\begin{question}\label{q2}
     Is there a single all-encompassing definition for truth?
 \end{question}
 In other words, is one of our definitions the {\em main} definition, with the
@@ -561,7 +562,7 @@ Just as we can provide multiple definitions of an English word, I think there
 is more than one valid definition of truth. Even in mathematics, we may find
 that we can define a formal and technical concept in different ways, and those
 ways end up being equivalent after some analysis.
-Accordingly, I'll provide more than one answer to question \ref{q1}.
+Accordingly, I'll provide more than one answer to question \ref{q2}.
 
 First I'll argue that:
 \begin{answer}{3a.}
@@ -795,13 +796,18 @@ effective truth is the most fundamental in terms of matching our expectation
 (our norm) for what we think of as truth; both while being honest about the
 uncertainty intrinsic to all our modes of reasoning.
 
-I imagine many people have a sense that an idea being true is:
+Many people view truth as having these two key properties:
+\begin{claim}[Spoiler: I will disagree with this.]\label{c7}
+    An idea being true is:
 \begin{itemize}
-    \item Independent of minds. That is, whether an idea is true has nothing to
+    \item {\bf Independent of minds.} That is, whether an idea is true has
+        nothing to
         do with anybody asking the question.
-    \item Context-free. That is, whether an idea is true does not depend on
+    \item {\bf Context-free.} That is, whether an idea is true does not depend
+        on
         how we think about or test the idea.
 \end{itemize}
+\end{claim}
 Yet both of our final definitions --- evolutionary and effective truth --- seem
 to be intrinsically tied to believers/users of ideas, and to the ways in which
 those ideas affect the people believing/using them. In the remainder of this
@@ -821,13 +827,16 @@ a car or a song.
 For the sake of this article, I'm going to slightly adjust the meaning of the
 two adjectives {\em invented} and {\em natural}.
 I'll use the word {\em natural} to mean anything that exists as part of the
-world, without the need for any perception or conscious creation of that object.
+world, without the need for purpose-driven
+creation (some natural objects, like volcanos, are ``created''
+over time, but not with a purpose in mind).
 I'll use the word {\em invented} for everything else; in other words, I'll call
-something invented when it would not exist without perception or conscious
-creation.
-It's not clear if the traditional idea of invention would apply to bird's nests,
-for example, but I'm shifting definitions so that they count as invented since
-they would not exist without being consciously created by birds.
+something invented when it would not exist without being created for a purpose.
+This is an expansion of the usual idea of invention.
+For example,
+it's not clear if the traditional idea of invention would apply to bird's nests,
+but I'm shifting definitions so that they count as invented since
+they would not exist without being created by birds to serve as a home.
 
 With these categories defined,
 let's take a look at an interesting invention: an object's
@@ -836,12 +845,89 @@ The philosopher Daniel Dennet calls the center of gravity
 a {\em theorist's fiction}
 because it is not a physical part of the world, although it is theoretically
 useful.
+It lives in an interesting space between being real and imaginary.
+A well-defined solid object always has a center of gravity,
+and no human decides where it is. In this way, it is independent of human minds
+to decide what it is.
+Yet it does not correspond to any particular molecule within that object.
+I cannot extract from an object its center of gravity in the same way
+I cannot extract from a dollar bill its financial value.
+In this way, it is dependent on human minds to understand what it is.
+
+Just as a car is an invention, so are useful fictions like centers of gravities.
+The idea of a center of gravity is something created by
+people with the purpose of better understanding physics.
+There are many other useful fictions in our universe. To help identify them,
+notice that:
+\begin{itemize}
+    \item A useful fiction $x$ is a {\em fiction}
+        in the sense that we can completely
+        describe the physical state of the world without needing to describe
+        object $x$.
+    \item A useful fiction $x$ is {\em useful} in the sense that we, humans,
+        accomplish some goal with it.
+\end{itemize}
+The idea of money is a useful fiction, as are the ideas of mathematics and
+of beauty.
+
+It's strange to call a part of physics, or to call a mathematical idea, a
+fiction. 
+I'm using the word {\em fiction}, as Dennet did, in a slightly
+nonstandard way.
+Instead of meaning that the idea is incorrect, I mean that it is created.
+
+Consider a simple kind of physics based on the game of life.
+In the game of life, the word {\em glider} means a particular 
+configuration of cells that moves diagonally across the board, assuming it does
+not encounter another object. Here's a glider:
+\begin{center}
+\includegraphics[height=3cm]{glider.png}
+\end{center}
+If we lived in the game of life, then we could completely describe the state of
+the world by listing which cells are on or off.
+The universe may contain nothing but gliders, yet we still have no need
+for the idea of a glider to describe everything in it.
+The glider idea is at once useful, created, and dependent upon minds for it to
+exist.
+There is nothing false about discussing gliders, but gliders are not an
+intrinsic part of the world.
+
+And here's why I'm discussing all of this:
+\begin{obs}\label{o3}
+    Truth is a useful fiction. It is an invention, and not a natural part of the
+    world.
+\end{obs}
+
+This observation disagrees with the common intuition from claim \ref{c7} that
+truth is independent of minds. How can I justify observation \ref{o3}?
+
+\begin{argt}[That truth is an invention.]
+    \normalfont
+    \begin{itemize}
+        \item[]
+        \item
+    The idea that ``$x$ is true'' only makes sense as a denial of the opposite
+    idea that ``$x$ is false.'' If there were no concept of a false idea, then
+            there would be no use or meaning in considering true ideas.
+        \item
+            The idea of falseness is clearly invented. We can describe
+            the world without having to include the idea of falseness.
+            There is a purpose to the idea of falseness, which is to understand
+            mistakes or deception.
+        \item
+            Since the idea of truth is essentially paired to the idea of
+            falseness,
+            it must be the case that both ideas are invented.
+    \end{itemize}
+\end{argt}
+
+A natural counter-argument is that perhaps falseness is invented while truth is
+not. I will expand on this point below. % XXX provide a specific forward ref
 
 % HERE
-%
-% Get as cleanly as possible to an argument that truth is an invented idea.
-% State it as an observation.
-%
+% * There is an argument above. Also turn it into an argt environment.
+% * Segue to the next section.
+
 
 
 
@@ -1227,6 +1313,12 @@ This might be a good approximate line of thinking:
         my square bracketed notes above.
     \item Close with the key ideas from my opening paragraph in the square
         bracketed notes above.
+        I think there's a good direction of: what do we take away from all of
+        this? And it's something like: treat truth mostly as we have been
+        already, but with more humility. See ourselves less as about to know
+        everything, and more as craftsmen (gender-netural version thereof) who
+        at best will forever being getting a little better at what we do. Think
+        of actions and results as being more fundamental than true or false.
     \item{} [{\bf Afterward}] Talk about how to read this article again if it
         was interesting. Meaning, (a) it is designed to be review-friendly by
         focusing on the highlighted elements, such as claims and definitions;

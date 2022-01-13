@@ -1155,6 +1155,21 @@ At the same time, you probably know to drive out of the way of an ambulance when
 you hear its siren. There is a goal associated with the mental word of sirens,
 which might be to obey traffic laws.
 
+\begin{center}
+\begin{tikzpicture}[node distance = 2cm, thick]%
+    \node (1) {\fbox{ideas=answers}};
+    \node (2) [right=of 1] {\fbox{questions}};
+    \node (3) [right=of 2] {\fbox{goals}};
+    \node (4) [below=of 1] {\fbox{mental words}};
+    \draw[<-] (1) -- node [midway,above] {from} (2);
+    %\draw[<-] (1) to [bend right] node [midway,below]{c} (3);
+    \draw[<-] (2) -- node [midway,above] {from} (3);
+    \draw[<-] (4) to node {d} (1);
+    \draw[->] (1, -1) -- (1, -5) node[pos=1.0, right] {abc};
+    %\draw[<-] (4) to [bend up] node [midway, left]{d} (1);
+\end{tikzpicture}%
+\end{center}
+
 Just as internal thoughts are conscious actions we take, so is the formation of
 a new mental word. This means that mental words, like internal ideas, can only
 exist in correspondence to some goal. An example: Suppose one day you're stung
@@ -1175,28 +1190,6 @@ I'll summarize this idea along with the previous section as:
     truly goal-free.
 \end{obs}
 
-\begin{tikzpicture}[node distance = 2cm, thick]%
-    \node (1) {1};
-    \node (2) [right=of 1] {2};
-    \node (3) [right=of 2] {3};
-    \draw[->] (1) -- node [midway,above] {a} (2);
-    \draw[->] (1) to [bend right] node [midway,below]{c} (3);
-    \draw[->] (2) -- node [midway,above] {b} (3);
-\end{tikzpicture}%
-
-\begin{center}
-\begin{tikzpicture}[node distance = 2cm, thick]%
-    \node (1) {\fbox{ideas=answers}};
-    \node (2) [right=of 1] {\fbox{questions}};
-    \node (3) [right=of 2] {\fbox{goals}};
-    \node (4) [below=of 1] {\fbox{mental words}};
-    \draw[<-] (1) -- node [midway,above] {from} (2);
-    \draw[<-] (1) to [bend right] node [midway,below]{c} (3);
-    \draw[<-] (2) -- node [midway,above] {from} (3);
-    \draw[<-] (4) to node {d} (1);
-    %\draw[<-] (4) to [bend up] node [midway, left]{d} (1);
-\end{tikzpicture}%
-\end{center}
 
 % HERE
 %

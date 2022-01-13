@@ -1145,10 +1145,13 @@ perception, then you can imagine ideas that we will never think of.
 
 \subsection{Mental Words}
 
-We have the rough workings of an abstract model of thought. I'll add one more
-ingredient to this before moving on. Earlier, I said that this article excludes
-the color green from our meaning of an idea. 
-In this section I'll start to use the term {\em mental word} to talk about
+We have the rough workings of an abstract model of thought.
+I'll add one more
+ingredient to this model before moving on.
+Earlier, I said that this articule adjusts the meaning of the word
+{\em idea} to exclude, say, the color green since the color green by itself
+can't be true or false.
+In this section I'll introduce the term {\em mental word} to talk about
 things like the color green;
 mental words are
 pieces of ideas we can take apart and put together again to get
@@ -1157,8 +1160,8 @@ colors or water heaters or letters of the alphabet.
 Intuitively, you might want to think of
 ideas as {\em mental sentences}, and then mental words are whatever building
 blocks these are made from.
-As with the term {\em idea}, I won't try to define {\em mental word}.
-Instead, I'll notice something about our intuition for mental words.
+As with the term {\em idea}, I won't try to define mental words,
+but I will analyze our intuition around them.
 
 Where do mental words come from?
 Perhaps external ideas (perceptions, thoughts of others, or associations) might
@@ -1203,10 +1206,12 @@ article:
     \draw[<-] (1) -- node [midway,above] {from} (2);
     %\draw[<-] (1) to [bend right] node [midway,below]{c} (3);
     \draw[<-] (2) -- node [midway,above] {from} (3);
-    \draw[->] (1, -0.5) .. controls (1.4, -1.35) .. (1, -2.2) node[pos=0.5,
-    right] {make};
-    \draw[<-] (-1, -0.5) .. controls (-1.4, -1.35) .. (-1, -2.2) node[pos=0.5,
-    left] {make};
+    \draw[->] (4) -- node [right] {\ \ make} (1);
+    \draw[->] (4) -- node {} (2);
+    %\draw[->] (1, -0.5) .. controls (1.4, -1.35) .. (1, -2.2) node[pos=0.5,
+    %right] {make};
+    %\draw[<-] (-1, -0.5) .. controls (-1.4, -1.35) .. (-1, -2.2) node[pos=0.5,
+    %left] {make};
     %\draw[->] (1, -1) -- (1, -5) node[pos=1.0, right] {abc};
     %\draw[<-] (4) to [bend up] node [midway, left]{d} (1);
 \end{tikzpicture}%

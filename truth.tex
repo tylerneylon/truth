@@ -736,6 +736,7 @@ other qualified approximations for reality as true in the same sense.
 Here's some high-level reasoning in favor of definition \ref{d8} of
 effective truth:
 \begin{argt}[That effective truth matches our intuitive idea of truth.]
+    \label{a1}
     \normalfont
 \begin{itemize}
     \item[]
@@ -908,7 +909,7 @@ And here's why I'm discussing all of this:
 This observation disagrees with the common intuition from claim \ref{c7} that
 truth is independent of minds. How can I justify observation \ref{o3}?
 
-\begin{argt}[That truth is an invention.]
+\begin{argt}[That truth is an invention.]\label{a2}
     \normalfont
     \begin{itemize}
         \item[]
@@ -930,7 +931,7 @@ truth is independent of minds. How can I justify observation \ref{o3}?
 
 A natural counter-argument is that perhaps falseness is invented while truth is
 not.
-I will expand on this point below % XXX provide a specific forward ref
+I will expand on this point below in \S\ref{s_mental_words}
 by looking more closely at the dependence between ideas that are alternatives to
 each other.
 
@@ -1143,46 +1144,49 @@ perception, then you can imagine ideas that we will never think of.
 % XXX Add some kind of callout to this subsection to summarize and highlight the
 %     main point of it. Or does it go in the next subsection?
 
-\subsection{Mental Words}
+\subsection{Mental Words}\label{s_mental_words}
 
-We have the rough workings of an abstract model of thought.
+We have the rough workings of a model of human thought.
 I'll add one more
-ingredient to this model before moving on.
+ingredient to this model.
 Earlier, I said that this articule adjusts the meaning of the word
-{\em idea} to exclude, say, the color green since the color green by itself
+{\em idea} to exclude, say, the color green since a color
 can't be true or false.
 In this section I'll introduce the term {\em mental word} to talk about
-things like the color green;
+things like colors;
 mental words are
-pieces of ideas we can take apart and put together again to get
-new ideas. Mental words include things like
+the pieces that ideas are made of.
+They include things like
 colors or water heaters or letters of the alphabet.
-Intuitively, you might want to think of
-ideas as {\em mental sentences}, and then mental words are whatever building
-blocks these are made from.
+Intuitively, if
+ideas are {\em mental sentences}, then mental words are whatever building
+blocks these sentences are made from.
 As with the term {\em idea}, I won't try to define mental words,
 but I will analyze our intuition around them.
 
-Where do mental words come from?
-Perhaps external ideas (perceptions, thoughts of others, or associations) might
-play a role in brining about new mental words.
-For example, we cannot learn the sound of a
-ambulance siren
-without perception.
-At the same time, you probably know to drive out of the way of an ambulance when
-you hear its siren.
-We have a mental word --- {\em siren} --- and a goal that motivates us to learn
-it --- {\em obey traffic laws}.
+To ensure the notion of a mental word is clear, let's consider another example,
+besides {\em green}.
+Suppose one day you're stung
+by a distinctive-looking wasp.
+A year later, you see a similar wasp, and you
+steer clear of it, remembering the sting.
+It's not that you have an actual word you can say out loud to name this wasp,
+but still you have a connection in your brain that can recognize it and
+understand something about it.
+Contrast this level of awareness to a bug you may peripherally perceive, but
+never care about; if you saw such an innocuous bug later, you would have no
+associations at all with it.
 
-Just as internal thoughts are conscious actions we take, so is the formation of
-a new mental word. This means that mental words, like internal ideas, can only
-exist in correspondence to some goal. An example: Suppose one day you're stung
-by a distinctive-looking wasp. A year later, you see a similar wasp, and you
-steer clear of it, remembering the sting. There is a goal in remembering this
-kind of wasp, which is not get stung. Contrast this to another bug, suppose a
-quiet and unobtrusive bug that you occasionally see, but never care about at
-all. If you never care about this other bug, then you don't have a mental word
-for it.
+Perhaps mental words originate in a brain process that precedes conscious
+thought.
+I'm not going to suggest a specific origin story for mental words
+because we don't need
+to in order to say something interesting.
+Above, I argued that any internal idea is a conscious action, and therefore is
+goal-motivated. The first time we use a mental word consciously, it will be a
+part of an internal idea. In other words, as soon as we deliberately
+(consciously) think of a mental word, it is attached to a goal, and this
+attachment is unavoidable.
 
 I'll summarize this idea along with the previous section as:
 \begin{obs}
@@ -1204,20 +1208,38 @@ article:
     \node (3) [right=of 2] {\fbox{goals}};
     \node (4) [below=of 1] {\fbox{mental words}};
     \draw[<-] (1) -- node [midway,above] {from} (2);
-    %\draw[<-] (1) to [bend right] node [midway,below]{c} (3);
     \draw[<-] (2) -- node [midway,above] {from} (3);
     \draw[->] (4) -- node [right] {\ \ make} (1);
     \draw[->] (4) -- node {} (2);
-    %\draw[->] (1, -0.5) .. controls (1.4, -1.35) .. (1, -2.2) node[pos=0.5,
-    %right] {make};
-    %\draw[<-] (-1, -0.5) .. controls (-1.4, -1.35) .. (-1, -2.2) node[pos=0.5,
-    %left] {make};
-    %\draw[->] (1, -1) -- (1, -5) node[pos=1.0, right] {abc};
-    %\draw[<-] (4) to [bend up] node [midway, left]{d} (1);
 \end{tikzpicture}%
 \end{center}
 
+In this diagram, I've included the notion that mental words make questions as
+well as ideas. This makes sense because a question is the same thing as an idea
+with a blank space in it: {\em what is your name?} is the same as
+{\em your name is $x\in X$?} where $X$ is the set of possible names.
 
+When a mental word adds information to an idea, it must do so by distinguishing
+from some alternative. In other words, a mental word must always have a set of
+alternatives that are being excluded. This set is often not clearly defined; if
+I asked why the chicken crossed the Mobius strip\footnote{Answer: To
+get to the same side.\par Note that the corresponding idea {\em The chicken
+crossed the Mobius strip to get to the same side} seems to pertain to a new
+kind of truth not discussed in this paper ---
+a kind of ``truth'' based on comedic
+value, albeit rather hypothetical value in this case.}
+the set of possible answers allows for creativity, and is not something we could
+easily enumerate.
+
+Some mental words are so closely coupled with others that they are essentially
+always considered as alternatives to each other. Questions like ``Is idea $x$
+correct?'' will typically have possible answers {\em true} or {\em false}.
+Just as {\em true} and {\em false} are constant companions,
+many mental words are not singletons, but rather {\em require}
+specific alternatives to exist. Heat makes no sense without cold; nor does light
+make sense without dark. In this way, the notion of truth cannot exist alone;
+it is one with the notion of falseness. This coexistence bolsters argument
+\ref{a2} above that truth is an invention.
 
 % HERE
 %
@@ -1232,6 +1254,7 @@ article:
 %
 % Next full section is about ignorance. Maybe call it Ignorance and Omniscience.
 
+\section{Ignorance and Omniscience}
 
 
 \hr

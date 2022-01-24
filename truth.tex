@@ -1495,15 +1495,22 @@ about our world}, not about other words. This relates to (\ref{eq2}) in that my
 phrase {\em physical goals} are restricted to actions and results observable
 within our ``inner'' world, then one that you know all about.
 
-In a very real sense, when you know the full physical state of the world, it's a
-bit like listing all possible worlds $\{x_1, x_2, \ldots\}$ in a giant list, and
-then asking which possible world is the real one. When you're omniscient, you
-know there's a particular number $k$ that indicates the real world $x_k$.
+When you know the full physical state of the world, it's
+like listing all possible worlds $\{x_1, x_2, \ldots\}$ in a giant list, and
+then learning which possible world is the real one. When you're omniscient, you
+know there's a certain number $k$ that indicates the real world $x_k$.
+If the world used the game of life as the rules of physics, then perhaps this
+number $x_k$ would be the starting conditions of the world; everything else
+follows. No matter what the rules of physics are, we can suppose there is some
+way to encode the state of the universe across all time, and the number
+$x_k$ can be this encoding.
 
-I'm going to pose a strange-seeming mathematical question, and the purpose of
-this question is (a) to show that some math questions make us wonder what the
+Building on the idea of encoding the world in a single number,
+I'm going to pose a strange-seeming mathematical question whose purpose is
+(a) to show that some math questions make us wonder what the
 point of the question is, and (b) to point us toward understanding the role of
 curiosity and abstract thought in our thoughts.
+
 Given any positive integer, I can write that number in base 2, in base 3,
 etc.\footnote{We normally write a number, like 7, in base 10 because we have 10
 fingers, and 10 digits (0-9). If we had only, say, 5 fingers, then we'd have
@@ -1512,37 +1519,144 @@ digits 0-4 and we'd count like this: 0, 1, 2, 3, 4, 10 (this means 5 to us), 11
 we had $b$ fingers instead of 10. If this notion is entirely new to you, it's
 too much to learn in a footnote, and I recommend googling ``introduction to
 number bases'' to learn more.}
-Given any number, I'll write its binary (base 2) form on the top of a table,
+I'll create a table by writing a number's binary (base 2)
+form in the top row,
 and then below that its base 3 form, then its base 4 form, and so on, keeping
-them all right-aligned. Here's a table for the number 321:
+them all right-aligned. Here's a table for the number 534:
 
 \begin{center}
-\begin{tabular}{ccccccccc|c}
-      &   &   &   &   &   &   &   &  & \em base \\
-    1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & \it 2 \\
-      &   &   & 1 & 0 & 2 & 2 & 2 & 0 & \it 3 \\
-      &   &   &   & 1 & 1 & 0 & 0 & 1 & \it 4 \\
-      &   &   &   &   & 2 & 2 & 4 & 1 & \it 5 \\
-      &   &   &   &   & 1 & 2 & 5 & 3 & \it 6 \\
-      &   &   &   &   &   & 6 & 3 & 6 & \it 7 \\
-      &   &   &   &   &   & 5 & 0 & 1 & \it 8 \\
+\begin{tabular}{cccccccccc|c}
+  &   &   &   &   &   &   &   &   &   &\em base \\
+1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & \it 2 \\
+  &   &   &   & 2 & 0 & 1 & 2 & 1 & 0 & \it 3 \\
+  &   &   &   &   & 2 & 0 & 1 & 1 & 2 & \it 4 \\
+  &   &   &   &   &   & 4 & 1 & 1 & 4 & \it 5 \\
+  &   &   &   &   &   & 2 & 2 & 5 & 0 & \it 6 \\
+  &   &   &   &   &   & 1 & 3 & 6 & 2 & \it 7 \\
+  &   &   &   &   &   & 1 & 0 & 2 & 6 & \it 8 \\
+  &   &   &   &   &   &   & 6 & 5 & 3 & \it 9 \\
+  &   &   &   &   &   &   & 5 & 3 & 4 & \it 10 \\
 \end{tabular}
 \end{center}
 
+I can make such a table for any number.
+I can further imagine that each number in the table is the value of a cell,
+analgous to the cells in the game of life being on or off.
+I can think of the
+top row as the first time step, and as each subsequent row as the next time
+step.
+(Notice how the number 534 effectively encodes and captures this entire
+world; this is ``world 534'' in some sense.)
+Now I can ask a question like:
+{\em How long does the 1 in the second-from-right column survive?}
+In other words, how long does this particular cell:
+\begin{center}
+    1 0 0 0 0 1 0 1 \fbox{\bf 1} 0
+\end{center}
+remain as a 1 in the rows immediately below the top row?
+The answer, for 534, is that this value survives for the first 4
+time steps.
 
-TEXT
+As promised, I hope that you have two reactions to this question, corresponding
+to earlier goals (a) and (b) of this thought experiment:
+\begin{enumerate}
+    \item I hope you find this question to be arbitrary. How is it useful, or
+        why would we ever ask this question outside of a philosophy paper?
+    \item I hope you wonder:
+        Out of curiosity, are there any fun mathematical patterns to questions
+        like this?
+\end{enumerate}
+For a moment, I'm going to ask you to pretend that you don't have any curiosity,
+so that the first reaction --- wondering why we're doing this --- is your only
+reaction.
+
+But now consider the similarities between these questions:
+\begin{itemize}
+    \item{} [In reality] How long will this person live?
+    \item{} [In Conway's game of life] How long will this glider live?
+    \item{} [In a number base table, as above] How long will this value survive?
+\end{itemize}
+These questions all have the same shape: They are noticing an
+object in the world, and are asking how long it will be around.
+We probably have different emotional reactions to the questions, but they feel
+like the same kind of question to the physically omniscient.
+
+If you asked how long you have to live to the physically omniscient, they can
+answer your question, but it feels like a pointless question to them. I've
+purposefully chosen a clearly-motivated-to-mortals question (how long will I
+live?) to help illustrate
+that no amount of motivation can really cross the gap from ignorance to
+omniscience. I'll summarize this idea as:
 
 \begin{equation}\label{eq3}
     \text{\em Mental words seem arbitrary and unmotivated to the physically
     omniscient.}
 \end{equation}
 
+The idea of {\em curiosity} throws a wrench into this simple perspective because
+virtually any question that can be asked can be motivated, in theory, by
+curiosity. If you're physically omniscient and curious, you might find all
+questions to be motivated.\footnote{I suspect curiosity has an evolutionary
+origin that connects it with survival. For example, perhaps a curious pre-human
+primate would discover the utility of controlled fire, whereas a less curious
+species would not. This paper won't try to analyze curiosity, but I think it's
+something we could analyze and put boundaries around. We humans find some things
+more interesting than others, and there are probably ways to understand this.}
 
+One thing we can do to fit curiosity into this model is to consider two kinds
+world: the physical world, and the world of abstract thought.
+A historic fact is an idea about the physical world, while a mathematical
+theorem is an idea about the abstract world.
+Many ideas blend these two worlds together, such as asking if a particular
+theory of physics is true. In that case, we imagine a possible world based on a
+physical model; this model lives in the abstract world. And we ask if this model
+is a good approximation for reality; we can do a physical experiment to check.
 
-% TODO This next sentence doesn't feel well-reasoned to me.
+Whenever curiosity is the motivation for a physically omniscient person, there
+must be an abstract mental word involved. If there were not, then there is
+nothing unknown that makes sense as a question --- we get back to
+``is blue blue?'' which invokes no curiosity. And once we're looking at abstract
+notions, then we're outside the realm of physical knowledge.
+If we wanted to, we could change the thought experiment to imagine a person who
+knows all physical states of the world {\em and} all abstract ideas as well. I
+think that such a person would then be incapable of curiosity, as no question
+could possibly motivated. Indeed, all questions would seem nonsensically obvious
+to such a being. Sounds like a disappointing existence.
 
-But such an outside world is a distraction to this thought experiment, where we
-are learning about the role of knowledge in how we think.
+I'll summarize the ideas of this section and the previous one as:
+\begin{obs}
+    We have no motivation for ideas or mental words without ignorance about
+    them.
+\end{obs}
+
+The omniscient thought experiment also leads as to another argument that truth
+is an idea we created for a purpose:
+
+\begin{argt}[That truth is an invention]
+    \label{a4}
+    \normalfont
+    \begin{itemize}
+        \item[]
+        \item If we can fully describe the phyiscal world without
+            mental word $x$,
+            then $x$ must be created by us.
+        \item We can only create mental words if we have a purpose for them.
+        \item So if mental word $x$ is not needed to fully describe the
+            physical world, it must be invented.
+        \item The notion of truth is not needed to fully describe the
+            physical world.
+        \item Therefore truth is an invention.
+    \end{itemize}
+\end{argt}
+
+% TODO Ensure I clarify that I use the word _notion_ as a synonym for _mental
+% word_.
+
+\subsection{Dependence on Context}
+
+% This section will be about how truth depends on context.
+% This acts as a kind of refutation for claim 7, albeit qualified.
+
 
 % HERE
 %

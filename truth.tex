@@ -1886,11 +1886,98 @@ apples aren't vegetables.
 Tomatoes (considered a vegetable) are seed-bearing fruits, carrots are roots,
 spinach are leaves. Some people consider mushrooms to be vegetables, in which
 case we can no longer say that vegetables are a subgroup of edible plants,
-because mushrooms are a fungi and not plants.
+because mushrooms are fungi and not plants.
 Just like {\em species}, there is no clear and elegant definition for what a
 {\em vegetable} really is.
 
+What distinguishes notions like species and vegetables from things like
+{\em positive integers}, which seem to be more clearly-defined?
+I think the key is that our intuition for a species is based on looking at
+examples. It's true that scientists can walk away from the original intuition of
+a notion by
+changing the definition. But I'm going to argue that all of our
+intuitively-understood, example-based mental words are fuzzy the same way that
+species and vegetables are.
+
+\begin{argt}[That example-based mental words are fuzzy]
+    \label{a5}
+    \normalfont
+    \begin{itemize}
+        \item[]
+        \item Suppose that mental word $x$ is learned by example and is
+            intuitively understood, as opposed to being primarily understood via
+            a clear-cut definition.
+            For
+            example, people learn to distinguish dogs from cats by seeing
+            example images or meeting dogs and cats in person.
+        \item Mental words only achieve meaning by having alternatives that they
+            distinguish. Suppose mental word $y$ is an alternative to $x$.
+            For example $x$={\em dog} and $y$={\em cat}.
+        \item From the defining examples, we've intuitively learned properties
+            of objects
+            that indicate it is an $x$, and other properties that indicate it is
+            a $y$. For example, if a four-legged animal is over 2 feet tall at
+            the
+            shoulder, it's probably too big to be a domestic cat (but it might
+            still be a dog).
+        \item Perhaps we've never seen such an example, but it's logically
+            possible to encounter an object with properties of both $x$ and $y$
+            to such an extent that we feel confused.
+
+            To help justify that these confusing examples can exist:
+            Consider a single property $p$
+            of an object, and suppose we can represent $p$ as a real number. For
+            example, $p$ may be the length of an animal's tail. We learned to
+            distinguish $x$ from $y$ by examples, so we can let $p_x$ be the set
+            of $p-$values seen on $x$ examples, and similarly for $p_y$.
+
+            Perhaps all the $p_x$ values are less than all the $p_y$ values.
+            Then there must be some non-empty interval $I=(max(p_x), min(p_y))$.
+            If $I$ exists, then any time we see a new object with $p\in I$, we
+            cannot use property $p$ to distinguish an $x$ from a $y$. If there
+            is no such ambiguous interval $I$, it means the sets $p_x$ and $p_y$
+            must have some overlap, and again there is a range of $p$ values
+            that do not clearly indicate an object is an $x$ or a $y$.
+
+            In short, no matter what the sets $p_x$ and $p_y$ look like, simply
+            because they are finite sets of real numbers, there must be some
+            non-empty zone of ambiguity. Objects with a $p$ property in the
+            ambiguous zone cannot be distinguished based on the learning
+            examples.\footnote{In case you have a machine learning background,
+            this argument will probably be easier for you to grasp than for
+            other readers. I'm appealing to the intuition that even in cases
+            where we have a simple model and consistent data, we typically do
+            not have a {\em uniquely-determined} hypothesis. For example, if
+            $p_x=\{1.3, 2.4, 3.7\}$ and $p_y=\{4.1, 5.8\}$, and I see $p=3.9$,
+            then I have no way to tell if the object is an $x$ or a $y$.}
+            And this zone of ambiguity must exist for all real-valued
+            properties of the object (by the same argument).
+        \item Because we may one day see an object that we cannot identify as an
+            $x$ or a $y$, we have found a point of confusion in our current
+            understanding of mental word $x$.
+        \item Note: It's not necessary that these confusing objects are ever
+            actually seen in reality: If a mental word were truly clear, then
+            any
+            object we could ever encountered would have a definite label
+            associated with the mental word. Even the logical possibility of
+            encountering an indefinite (unclear) object shows the mental word to
+            allow for undecided edge cases.
+    \end{itemize}
+\end{argt}
+
+STUFF
+
 % HERE
+
+\begin{obs}\label{o7}
+    Many mental words are
+    intuitively defined in terms of examples. When this
+    happens, the mental word is {\em fuzzy} --- that is,
+    there exist edge cases without a
+    clear, objective relationship to the original mental word.
+\end{obs}
+
+MAYBE STUFF
 
 
 \subsection{Social Ideas}
@@ -1930,7 +2017,7 @@ safe and organized driving.
 
 STUFF HERE
 
-\begin{obs}\label{o7}
+\begin{obs}\label{o8}
     Social ideas are those which require agreement between minds in order to be
     useful toward their goals. Most day-to-day ideas we typically think about
     have a social component to them.

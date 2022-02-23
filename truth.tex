@@ -323,7 +323,7 @@ true. I'll take a closer look at
 the difference between knowing and guessing in section \ref{s7} below.
 
 If math is the most pure form of {\em abstract} truth I can imagine, then the
-most pure form of {\em practical} truth comes from physics --- ideas
+most pure form of {\em practical} truth comes from physics; I mean ideas
 justified by repeatable experiments:
 
 \begin{defn}[Verifiable Truth]
@@ -339,33 +339,42 @@ As an example, consider:
 We can boil some water and measure its temperature to test this.
 Of course,
 if we were to try this experiment in a setting with high or low air pressure, we
-would find the boiling point to be slightly different. So it turns out that
+would find the boiling point to be slightly different.
+It turns out that
 there are other variables to account for in repeating an experiment ---
 variables that we may not be aware of.
 
 In considering mathematical truth, we found many sources of uncertainty.
 Do all verifiable truths also contain uncertainty?
 
-Let's try to imagine a highly specific verifiable claim, one where we can
+Let's try to imagine a specific verifiable claim, one where we can
 account for all the relevant variables. If we can find such a claim, then we
-could get a result that would always, without exception, be completely
-consistent with the claim. If the result is based purely in logic, then we are
+could get a result that would always, without exception, be
+consistent with the claim.
+If the result is based purely in logic, then we're
 back to our concerns with mathematical truth, so this is only a new idea if we
 think about physical experiments.
 
 Let's imagine that one day we completely understand the laws of physics.
 Further, let's imagine that there turn out to be quite simple rules, and that
 all of the physical principles we use in practice, such as Newton's laws of
-mechanics, are emergent properties of the simple rules. Suppose, for example,
-that we lived in a universe based on Conway's game of life. This is a 2d world
-of binary ``cells,'' each one being on or off in a given time step; each time
-step is discrete (time moves forward frame by frame, as opposed to
-continuously), and there is a set of rules to determine each time step from the
-previous one.
+mechanics, are emergent properties of the simple rules.
+To solidify this framework, we can use an existing set of simple rules
+called Conway's game of life, named for its inventor John Conway.
 
-% TODO XXX Clarify that I'll use the word "claim" for truth-bearers.
+The game of life takes place in a grid of square cells, each of which is either
+dead or alive at any given point in time. The grid evolves over
+time. Each cell's status (alive or dead) is determined by the status of its 8
+surrounding cells from the previous time step. This illustration fully
+describes all of the evolution rules:
+\begin{center}
+\includegraphics[width=13cm]{gameoflife.png}
+\end{center}
+Those rules apply to every single cell between every two time steps.
 
-In such a world, we can make an extremely strong physics-based claim, such as:
+\pagebreak
+
+In such a world, we can make a strong physics-based claim, such as:
 \begin{claim}
     Cell $x$ will remain on from one time step to the next when 2 or 3
     neighboring cells are on in the previous time step.

@@ -2052,9 +2052,10 @@ It's true that vegetables are typically edible parts of plants,
 but not every edible part of a plant is a vegetable;
 apples aren't vegetables.
 Tomatoes (considered a vegetable) are seed-bearing fruits, carrots are roots,
-spinach are leaves. Some people consider mushrooms to be vegetables, in which
-case we can no longer say that vegetables are a subgroup of edible plants,
-because mushrooms are fungi and not plants.
+a leaf of spinach is \dots a leaf.
+Some people consider mushrooms to be vegetables, in which
+case we can no longer say that vegetables are a subgroup of edible plants
+because mushrooms are fungi, not plants.
 Just like {\em species}, there is no clear and elegant definition for what a
 {\em vegetable} really is.
 
@@ -2075,85 +2076,90 @@ species and vegetables are.
     \begin{itemize}
         \item[]
         \item Suppose that concept $x$ is learned by example and is
-            intuitively understood, as opposed to being primarily understood via
+            intuitively understood, as opposed to being understood via
             a clear-cut definition.
             For
-            example, people learn to identify {\em dogs}
-            by seeing pictures of dogs, 
-            or by seeing actual dogs in person.
+            example, people learn to identify {\em cats}
+            by seeing pictures of cats, 
+            or by seeing actual cats in person.
         \item Concepts only achieve meaning by having alternatives that they
             distinguish. Suppose concept $y$ is an alternative to $x$.
-            For example $x$={\em dog} and $y$={\em cat}.
-        \item From the defining examples, we've intuitively learned properties
-            of objects
+            For example $x$={\em cat} and $y$={\em dog}.
+        \item From the defining examples for concepts $x$ and $y$, we've
+            intuitively learned properties of objects
             that indicate it is an $x$, and other properties that indicate it is
             a $y$. For example, if a four-legged animal is over 2 feet tall at
             the
             shoulder, it's probably too big to be a domestic cat, but it might
             still be a dog.
-        \item Perhaps we've never seen such an example, but it's logically
-            possible to encounter an object with properties of both $x$ and $y$
-            to such an extent that we feel confused.
+        \item It's logically possible to encounter an object with properties of
+            both $x$ and $y$ to such an extent that we feel confused.
 
             To help justify that these confusing examples can exist:
             Consider a single property $p$
             of an object, and suppose we can represent $p$ as a real number. For
-            example, $p$ may be the length of an animal's tail. We learned to
+            example, $p$ may be an animal's height. We learned to
             distinguish $x$ from $y$ by examples, so we can let $p_x$ be the set
-            of $p$\,-values seen on examples of concept $x$. Similarly, $p_y$
-            is the set of $p$\,-values from examples of $y$.
+            of $p$\,-values seen on examples of concept $x$ (such as cat
+            heights).  Similarly, $p_y$
+            is the set of $p$\,-values from examples of $y$ (such as dog
+            heights).
 
             Perhaps all the $p_x$ values are less than all the $p_y$ values.
             Then there must be some non-empty interval
-            $I=\big(\!\max(p_x), \min(p_y)\big)$.
-            If $I$ exists, then any time we see a new object with $p\in I$, we
-            cannot use property $p$ to distinguish an $x$ from a $y$. If there
-            is no such ambiguous interval $I$, it means the sets $p_x$ and $p_y$
-            must have some overlap, and again there is a range of $p$ values
-            that do not clearly indicate an object is an $x$ or a $y$.
+            $I=\big(\!\max(p_x), \min(p_y)\big)$ in between $p_x$ and $p_y$.
+            In this case, when you see a new object with a $p$\,-value in $I$,
+            you can't use property $p$ to distinguish an $x$ from a $y$.
+            If, on the other hand, the $p_x$ and $p_y$ values overlap, then
+            there is still a range of $p$ values
+            that do not clearly indicate an object is an $x$ or a $y$ ---
+            specifically, the range where the example values overlap.
+
+\begin{center}
+\includegraphics[width=11cm]{pxpy_sets.png}
+\end{center}
 
             In short, no matter what the sets $p_x$ and $p_y$ look like, simply
             because they are finite sets of real numbers, there must be some
-            non-empty zone of ambiguity. Objects with a $p$ property in the
+            non-empty zone of ambiguity. Objects with a value of $p$ in the
             ambiguous zone cannot be distinguished based on the learning
-            examples.\footnote{In case you have a machine learning background,
-            this argument will probably be easier for you to grasp than for
-            other readers.
-            I'm appealing to the intuition that even when we decide to find a
-            simple decision boundary, such as a straight line in a plane, and we
-            have data consistent with that decision boundary, we typically do
-            not have a {\em uniquely-determined} hypothesis. For example, if
-            $p_x=\{1.3, 2.4, 3.7\}$ and $p_y=\{4.1, 5.8\}$, and I see $p=3.9$,
-            then I have no definitive
-            way to tell if the object is an $x$ or a $y$.}
-            This ambiguous zone must exist for all real-valued
-            properties of the object by applying the same argument to each
-            property.
+            examples.\footnote{This argument is inspired by ideas from machine
+                learning.  I'm appealing to the intuition that even when we
+                decide to find a simple decision boundary, such as a straight
+                line in a plane,
+                we typically do not have a {\em uniquely-determined}
+                hypothesis. For example, if $p_x=\{1.3, 2.4, 3.7\}$ and
+                $p_y=\{4.1, 5.8\}$, and I see $p=3.9$, then I have no
+                definitive way to tell if the object is an $x$ or a $y$.}
+            This argument shows that an ambiguous zone must exist for all
+            real-valued properties.
         \item Because we may one day see an object that we cannot identify as an
             $x$ or a $y$, we have found a point of confusion in our current
             understanding of concept $x$.
-        \item Note: It's not necessary that these confusing objects are ever
-            actually seen in reality: If a concept were truly clear, then
+            This is what it means for a concept to be fuzzy.
+        \item Note that it's unnecessary for these confusing objects to be
+            seen in reality: If a concept were truly clear, then
             any
-            object we could ever encountered would have a definite label
-            associated with the concept. Even the logical possibility of
-            encountering an indefinite (unclear) object shows the concept to
-            allow for undecided edge cases.
+            object we could ever encounter would have a definite label
+            associated with the concept (e.g., is-a-hot-dog, is-not-a-hot-dog).
+            The mere possibility of
+            encountering an indefinite (unclear) object shows that the concept
+            has undecided edge cases.
     \end{itemize}
 \end{argt}
+
+\pagebreak
 
 The conclusion:
 
 % TODO Consider labeling all observations like this.
 
 \newcommand{\obsseven}{
-    Many concepts are
-    intuitively defined in terms of examples. When this
-    happens, the concept is {\em fuzzy} --- that is,
-    there exist edge cases without a
-    clear, objective relationship to the original concept.
+    Many concepts are intuitively defined by examples.
+    Every such concept is {\em fuzzy} in that it's unclear if the concept
+    applies to some objects.
 }
-\begin{obs}[Fuzziness]\label{o7}
+\begin{obs}\label{o7}
     \obsseven
 \end{obs}
 
@@ -2937,7 +2943,7 @@ What is truth?
     \obssix
 \end{obs}
 
-\begin{obs}[Fuzziness]
+\begin{obs}
     \ \\
     \obsseven
 \end{obs}

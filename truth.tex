@@ -58,6 +58,9 @@
     \medskip\centerline{$\dotq\dotq\dotq\dotq\cdot$}\medskip
 }
 
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
 \begin{document}
 
 {\bf Notes on Truth}
@@ -726,6 +729,8 @@ the descriptive/normative viewpoints mentioned earlier:
         better achieve the goal by using the idea.
 \end{itemize}
 
+% NOTE: I quote myself later in the supertruth section, so if I change this,
+%       then I'll need to update that quote as well.
 I'll summarize this:
 \newcommand{\obstwo}{
     For both
@@ -2586,68 +2591,74 @@ This observation refutes claim \ref{c8}.
 It is not accurate to say that human knowledge is purely founded upon a
 pursuit of pre-existing external truths.
 
-\scenebreak
+\subsection{Supertruth}\label{supertruth}
 
 Throughout this article, I've been distinguishing between two kinds of intuition
 for truth.
 I've argued in favor of {\em effective truth} as matching our intuition for what
-we actually use in practice. % TODO review for consistency here
-At the same time, I've argued that we often assume properties P1-P3 about truth,
-and it seems that this is another perspective commonly held about truth.
+we use in practice.
+At the same time, I've argued that we often assume properties P1-P3 about truth.
 Despite my arguments against those properties, they are common enough to warrant
 a closer look.
 
-\subsection{Supertruth}\label{supertruth}
-
-If we put to one side the ideas of effective truth and evolutionary truth, then
-we can consider a mathematical model of thought in which ideas can only be
-purely true or purely false, and never somewhere in between.
+I've argued that the other kinds of truth listed in section \ref{s2}
+are special cases of effective truth, excluding evolutionary truth.
+Let's focus on thoughts based around {\em mathematical truth}, in which ideas
+can only be
+entirely true or entirely false, and never somewhere in between.
 I'm going to consider this alternate version
-of truth --- one that obeys properties P1-P3 --- and I'll call this notion
+of truth --- one that does obey properties P1-P3 --- and I'll call this notion
 {\em supertruth}.
 
 Some ideas appear to genuinely live in the world of supertruth. It's hard to
 imagine how 1+1=2 could be false to any degree without changing the rigorous and
-widely understood meaning of the terms. We could pretend we were thinking of
-addition modulo 2, or we could re-interpret + as an xor operation on strings of
-bits, but either of these is more sleight of hand than an objection to what is
+widely understood meaning of the terms. We could, for example,
+re-interpret + as an xor operation on strings of
+bits, but this is more sleight of hand than an objection to what is
 really meant in saying 1+1=2. Similarly, 1+1=3 is false any way you slice it; we
 could call it {\em superfalse}.
 
-Can non-mathematical ideas be supertrue?
-I can imagine that we live in world with permanent laws of physics, and that the
-state of the world can be fully and completely described in some axiomatic
-model. In that case, if we understood these laws, then we would be able to say
-something supertrue.
+Can an idea about the world --- not about abstract mathematics ---
+be supertrue?
+I'll call an idea {\em physical} if it can be tested in the world.
+My question becomes: Can a physical idea be supertrue?
+I can imagine that we live in a world with permanent laws of physics, and that
+the
+state of the world can be completely described in some axiomatic
+model.
+If we understood these laws, then I claim that we'd be able to find
+a physical idea that's supertrue.
 
-This article has highlighted some key differences between
-effective truth and supertruth.
-Let's look at what an idea needs to do in order to work around those
-differences, so that it remains supertrue.
-I'll frame a supertrue idea as one that says something of the format ``if $X$ is
+Let's see how that might work.
+I'll frame a supertrue idea as one that says something of the format ``If $X$ is
 true of the world, then $Y$ is also true.''
-To be supertrue, the idea must meet these requirements:
+A logically justified physical idea must meet these
+requirements to be supertrue:
 \begin{itemize}
-    \item To exist in a world with permanent laws of physics.
-    \item To use axioms about physics that coincide with those laws of physics.
-    \item To completely specify the relevant context of the antecedent $X$.
-    \item To only use physical definitions that are clearly and completely
-        defined to the finest possible resolution of physical structure (the
+    \item The idea exists in a world with permanent laws of physics.
+    \item The idea uses axioms about physics that coincide with those laws of
+        physics.
+    \item The idea completely specifies the relevant context of the antecedent
+        $X$.
+    \item The idea only uses physical definitions that are free of unknown edge
+        cases and clear down to
+        the finest possible resolution of physical structure (the
         ultimate analog of atoms, for example).
 \end{itemize}
-From another perspective, a supertrue idea must be not only a mathematical
-theorem, and not only be based on axioms that coincide with the underlying laws
-of physics, but must also be applied to a universe in which those laws of
-physics are truly universal.
+If our universe was the Game of Life, we might say, for example, that
+``A glider which never touches another living cell will live forever.''
+I can't give a real example because I don't know our own laws of physics (not
+exactly), but it
+seems likely to me that such statements are possible for our own world.
 
-I'd say that supertrue ideas about the world (as opposed to being purely
-mathematical) are possible, but neither within
-our current knowledge, nor likely to be how we think about the world anytime
-soon.
+My conclusion is
+that supertrue ideas about the world --- as opposed to being purely
+mathematical --- are possible, but are neither within reach,
+nor likely to be how we view the world anytime soon.
 
 Suppose we do come across a supertrue idea. In practice, every test of this idea
 will work as expected.
-However, as argued above in section \ref{s2}, we cannot know with certainty that
+However, as argued in section \ref{s2}, we cannot know with certainty that
 the idea is supertrue. If it is a math idea, we may make a mistake in
 calculation, or an error in evaluating the proof. If it is a physical idea, then
 we cannot have definitive proof that our set of axioms are correct, even if they
@@ -2675,23 +2686,49 @@ In case you have doubts that human intuition can be so self-contradictory, let's
 consider two illuminating examples. First, suppose you believe in the standard
 axioms of arithmetic, and then someone presents you with this statement about
 integers $x,y,z,n$:
+%\bigskip
+\begin{center}
+    If $n>2$, then there are no positive values of $x,y,z$ with
+    $x^n+y^n=z^n$.
+\end{center}
 \begin{equation}\label{eq5}
+    \text{The same thing in math notation:}\quad
     \forall n>2,\; \nexists\, x,y,z>0: x^n + y^n = z^n.
 \end{equation}
-(This is known as Fermat's Last Theorem.)
+This statement is known as Fermat's Last Theorem.
 Suppose you're friends with a well-established mathematician who you've never
 known to be wrong, and he reads a proof that (\ref{eq5}) is false. He tells you
 the proof is correct.
 Now you're in the state of intuitively believing in the axioms of arithmetic,
-and also believing (\ref{eq5}) to be false; this is a contradiction, because
+and also believing (\ref{eq5}) to be false.
+But this is a contradiction, because
 (\ref{eq5}) is true, and that truth can be proven based on those axioms. This is
-an example of having multiple intuitions that contradict each other.
+an example of simultaneously believing things that logically contradict each
+other.
 
-You might object that this is a constructed example, one that most people don't
-encounter in their daily lives. I'm including the example because it shows how
-a direct logical contradiction can be believed.
+% NOTE: I'm grabbing a public domain rock dove illustration from here:
+%       https://ohiohistorycentral.org/w/File:Rock_Dove.jpg
+% Commands I used to add rounded corners:
+%  convert -size 814x766 xc:none -draw "roundrectangle 0,0,814,766,80,80" mask.png
+%  convert rockdove.png -matte mask.png -compose DstIn -composite rockdove2.png
+% From:
+% https://stackoverflow.com/a/18992215/3561
+\begin{wrapfigure}{R}{6cm}
+    \includegraphics[width=6cm]{rockdove2.png}
+    % \captionsetup{labelformat=empty}
+    \footnotesize
+    \begin{changemargin}{0.5cm}{0.5cm}
+        {\em Columba livia}, from John Gould's {\em The Birds of Europe},
+        volume 3.
+    \end{changemargin}
+\end{wrapfigure}
+You might object by saying this is a constructed example, one that most people
+don't
+encounter in their daily lives.
+I've included it to show we can believe in
+direct logical contradictions.
 Other examples are less focused on pure logic.
-Imagine a person who has lived in New York City their entire
+Imagine a person who's lived in New York City their entire
 life. Suppose they think of doves as white birds, symbols of peace and
 cleanliness. With that understanding, they may honestly believe they've
 never seen a dove in person. However, if you see a pigeon in New York, it's
@@ -2700,7 +2737,8 @@ almost certain that you're looking at a {\em Columba livia} --- also known as a
 Pigeons and doves are more or less the same animals.
 Like the word {\em vegetable}, the non-scientific terms {\em dove} and
 {\em pigeon} are fuzzy ---
-but there are species which are considered to be both a dove and a pigeon.
+but there are species, including {\em Columba livia},
+which are considered to be doves, and to be pigeons at the same time.
 This is another example
 where intuition --- that you see pigeons every day, that you've never seen
 a dove --- may directly contradict itself.

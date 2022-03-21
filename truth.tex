@@ -1,10 +1,8 @@
-\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
-\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\geometry{landscape}                		% Activate for rotated page geometry
-%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
-								% TeX will automatically convert eps --> pdf in pdflatex		
+\documentclass[11pt, oneside]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{graphicx}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{float}
@@ -810,10 +808,10 @@ other qualified approximations for reality as true in the same sense.
 %     Every idea is approximate; there is no meaningful distinction between good
 %     reasoning or bad reasoning beyond testing the ideas to be compared.
 % \end{obs}
-% I do not mean to disregard a widely-accepted argument. I do mean to say that if
-% we have two ideas which reach the same conclusion, and both lines of argument
-% are equally accepted, then there is no way to distinguish which line of
-% reasoning is better than the other. 
+% I do not mean to disregard a widely-accepted argument. I do mean to say that
+% if we have two ideas which reach the same conclusion, and both lines of
+% argument are equally accepted, then there is no way to distinguish which line
+% of reasoning is better than the other. 
 
 I think that effective truth corresponds to our day-to-day intuition for truth.
 Here's a general argument to support this:
@@ -2709,7 +2707,8 @@ other.
 % NOTE: I'm grabbing a public domain rock dove illustration from here:
 %       https://ohiohistorycentral.org/w/File:Rock_Dove.jpg
 % Commands I used to add rounded corners:
-%  convert -size 814x766 xc:none -draw "roundrectangle 0,0,814,766,80,80" mask.png
+%  convert -size 814x766 xc:none \
+%      -draw "roundrectangle 0,0,814,766,80,80" mask.png
 %  convert rockdove.png -matte mask.png -compose DstIn -composite rockdove2.png
 % From:
 % https://stackoverflow.com/a/18992215/3561

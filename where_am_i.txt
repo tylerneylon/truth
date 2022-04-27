@@ -1,0 +1,4 @@
+This is just me keeping track of how far along I am in editing work
+with Sean.
+
+I'm up to the start of section 2.3 (currently line 696 in truth.tex).

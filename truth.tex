@@ -54,6 +54,18 @@
 \newtheorem{propn}{Proposition}
 \newtheorem*{claim}{Claim}
 \newtheorem{obs}{Observation}
+
+\newtheoremstyle{argtstyle} % name
+    {\topsep}               % Space above
+    {\topsep}               % Space below
+    {\itshape}              % Body font
+    {}                      % Indent amount
+    {\bfseries}             % Theorem head font
+    {:}                     % Punctuation after theorem head
+    {0.2em}                  % Space after theorem head
+    {}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{argtstyle}
 \newtheorem*{argt}{Argument}
 
 % \newtheorem*{innerargt}{Argument}
@@ -821,7 +833,8 @@ there are degrees to which an idea is true or false.
 
 Here's the theme of this article:
 Truth is not as straightforward as we'd like it to be.
-It's worth spelling out clearly how we can measure degrees of truth in terms of
+It's worth spelling out clearly how we can
+measure {\em degrees of truth} in terms of
 the descriptive/normative viewpoints mentioned earlier:
 \begin{itemize}
     \item{} [Descriptive perspective.]
@@ -868,14 +881,15 @@ It seems there's no goal to be achieved by knowing the sky is blue,
 so the idea is not effective (it's not goal-based) while
 still being true.
 
-Here is a response to that objection:
+Here's a response to that objection:
 Although the idea the-sky-is-blue does not itself specify a goal, there
 are many goals I can achieve with that idea. For example, I can paint a
 landscape picture that includes the sky.
 I can look up and determine if it's likely to rain or not.
 If I can succeed in achieving my own goals by making use of an
 idea, then that idea has been effectively true.
-Later, in observation \ref{o4}, I'll argue that we cannot even think of ideas
+Later, in observation \ref{o4}, I'll argue that we cannot
+even think of ideas
 unless they are somehow associated with some goal.
 
 Another objection to effective truth can be found in thinking that red bowling
@@ -923,6 +937,10 @@ other qualified approximations for reality as true in the same sense.
 % if we have two ideas which reach the same conclusion, and both lines of
 % argument are equally accepted, then there is no way to distinguish which line
 % of reasoning is better than the other. 
+
+% HERE I'm trying to update the format of
+%      the argument environment to end with
+%      a colon instead of a period.
 
 I think that effective truth corresponds to our day-to-day intuition for truth.
 Here's a general argument to support this:
@@ -1242,7 +1260,7 @@ The first connection I want to make is between ideas and answers to questions.
 
 If an idea tells us some information, then it must distinguish between different
 possibilities. If I say ``I'm having a nice day,'' then I'm distinguishing this
-from the possiblities of having an astounding day or a dog-tired day.
+from the possibilities of having an astounding day or a dog-tired day.
 If there were no other possibilities,
 then there is no information conveyed. If I said
 ``red is red'' without more context,
@@ -2107,7 +2125,6 @@ species, while jaguars and leopards look similar yet are different species.
 
 In fact, the closer we look at the notion of a {\em species}, the more problems
 we reveal:
-% HERE List problems like: microspecies, hybridization, ring species, evolution
 \begin{itemize}
     \item{} [Microspecies] Scientists have found that what you informally
         think of as blackberry plants are actually a

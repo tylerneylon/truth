@@ -116,7 +116,7 @@ export function getDodecahedronPtsLinesFaces() {
     let lines = [];
     let faces = [];
 
-    let phi = (1 + Math.sqrt(5)) / 2;
+    const phi = (1 + Math.sqrt(5)) / 2;
 
     // Here and below, s1, s2, s3 stand for "sign1", "sign2", etc.
 
@@ -160,6 +160,61 @@ export function getDodecahedronPtsLinesFaces() {
                     }
                 }
                 faces.push(face);
+            }
+        }
+    }
+
+    return [pts, lines, faces];
+}
+
+// Return [pts, lines, faces] of an icosahedron centered at the origin.
+export function getIcosahedronPtsLinesFaces() {
+
+    // I use the coordinates found here:
+    // https://en.wikipedia.org/wiki/Regular_icosahedron
+
+    let pts   = [];
+    let lines = [];
+    let faces = [];
+
+    const phi = (1 + Math.sqrt(5)) / 2;
+
+    // Build up the pts array.
+    for (let c1 = 0; c1 < 3; c1++) {
+        let c2 = (c1 + 1) % 3;
+        for (let s1 = -1; s1 <= 1; s1 += 2) {
+            for (let s2 = -1; s2 <= 1; s2 += 2) {
+                let pt = [0, 0, 0];
+                pt[c1] = s1;
+                pt[c2] = s2 * phi;
+                pts.push(pt);
+            }
+        }
+    }
+
+    // Build up the lines array.
+    const edgeLen = 2;
+    for (let i = 0; i < pts.length - 1; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+            if (isClose(vector.dist(pts[i], pts[j]), edgeLen)) {
+                lines.push({from: i, to: j});
+            }
+        }
+    }
+
+    // Build up the faces array.
+    // The strategy here is a little naive, but effective.
+    // I iterate through all triples (i, j, k) of point indexes and add the face
+    // whenever all 3 pair-wise distances are correct.
+    let faceMap = {};
+    for (let i = 0; i < pts.length - 2; i++) {
+        for (let j = i + 1; j < pts.length - 1; j++) {
+            for (let k = j + 1; k < pts.length; k++) {
+                if ( isClose(vector.dist(pts[i], pts[j]), edgeLen) &&
+                     isClose(vector.dist(pts[i], pts[k]), edgeLen) &&
+                     isClose(vector.dist(pts[j], pts[k]), edgeLen) ) {
+                    faces.push([i, j, k]);
+                }
             }
         }
     }

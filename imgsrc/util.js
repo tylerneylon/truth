@@ -206,7 +206,6 @@ export function getIcosahedronPtsLinesFaces() {
     // The strategy here is a little naive, but effective.
     // I iterate through all triples (i, j, k) of point indexes and add the face
     // whenever all 3 pair-wise distances are correct.
-    let faceMap = {};
     for (let i = 0; i < pts.length - 2; i++) {
         for (let j = i + 1; j < pts.length - 1; j++) {
             for (let k = j + 1; k < pts.length; k++) {
@@ -221,6 +220,73 @@ export function getIcosahedronPtsLinesFaces() {
 
     return [pts, lines, faces];
 }
+
+// Return [pts, lines, faces] of a cuboctahedron centered at the origin.
+export function getCuboctahedronPtsLinesFaces() {
+
+    // I used this page as a reference:
+    // https://en.wikipedia.org/wiki/Cuboctahedron
+
+    let pts   = [];
+    let lines = [];
+    let faces = [];
+
+    // Build up the pts array.
+    for (let c1 = 0; c1 < 3; c1++) {
+        let c2 = (c1 + 1) % 3;
+        for (let s1 = -1; s1 <= 1; s1 += 2) {
+            for (let s2 = -1; s2 <= 1; s2 += 2) {
+                let pt = [0, 0, 0];
+                pt[c1] = s1;
+                pt[c2] = s2;
+                pts.push(pt);
+            }
+        }
+    }
+
+    // Build up the lines array.
+    const edgeLen = Math.sqrt(2);
+    for (let i = 0; i < pts.length - 1; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+            if (isClose(vector.dist(pts[i], pts[j]), edgeLen)) {
+                lines.push({from: i, to: j});
+            }
+        }
+    }
+
+    // Build up the faces array.
+    // 1. Build up the squares.
+    for (let c = 0; c < 3; c++) {
+        for (let s = -1; s <= 1; s += 2) {
+            let face = [];
+            for (let i = 0; i < pts.length; i++) {
+                if (pts[i][c] == s) face.push(i);
+            }
+            faces.push(face);
+        }
+    }
+    // 2. Build up the triangles.
+    for (let s1 = -1; s1 <= 1; s1 += 2) {
+        for (let s2 = -1; s2 <= 1; s2 += 2) {
+            for (let s3 = -1; s3 <= 1; s3 += 2) {
+                let face = [];
+                let s = [s1, s2, s3];
+                for (let i = 0; i < pts.length; i++) {
+                    let numMatches = 0;
+                    for (let j = 0; j < 3; j++) {
+                        if (pts[i][j] == s[j]) numMatches++;
+                    }
+                    if (numMatches == 2) face.push(i);
+                }
+                faces.push(face);
+            }
+        }
+    }
+
+    return [pts, lines, faces];
+}
+
+
 
 // This expects `pts` to be a list of xyz arrays, and labels to be a
 // corresponding list of strings. Conceptually, this scans from left to right --

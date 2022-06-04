@@ -286,6 +286,95 @@ export function getCuboctahedronPtsLinesFaces() {
     return [pts, lines, faces];
 }
 
+// Return [pts, lines, faces] of an icosidodecahedron centered at the origin.
+export function getIcosidodecahedronPtsLinesFaces() {
+
+    // I used this page as a reference:
+    // https://en.wikipedia.org/wiki/Icosidodecahedron
+
+    let pts   = [];
+    let lines = [];
+    let faces = [];
+
+    const phi = (1 + Math.sqrt(5)) / 2;
+
+    // Build up the pts array.
+    // Add the points (0, 0, +-phi)_s. (_s = all shifts)
+    for (let c = 0; c < 3; c++) {
+        for (let s = -1; s <= 1; s += 2) {
+            let pt = [0, 0, 0];
+            pt[c] = s * phi;
+            pts.push(pt);
+        }
+    }
+    // Add the points (1/2)(+-1, +-phi, +-phi^2)_s.
+    for (let c1 = 0; c1 < 3; c1++) {
+        let c2 = (c1 + 1) % 3;
+        let c3 = (c1 + 2) % 3;
+        for (let s1 = -1; s1 <= 1; s1 += 2) {
+            for (let s2 = -1; s2 <= 1; s2 += 2) {
+                for (let s3 = -1; s3 <= 1; s3 += 2) {
+                    let pt = [0, 0, 0];
+                    pt[c1] = s1 / 2;
+                    pt[c2] = s2 * phi / 2;
+                    pt[c3] = s3 * phi * phi / 2;
+                    pts.push(pt);
+                }
+            }
+        }
+    }
+
+    // Build up the lines array.
+    const edgeLen = 1;
+    for (let i = 0; i < pts.length - 1; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+            if (isClose(vector.dist(pts[i], pts[j]), edgeLen)) {
+                lines.push({from: i, to: j});
+            }
+        }
+    }
+
+    // Build up the triangular faces.
+    for (let i = 0; i < pts.length - 2; i++) {
+        for (let j = i + 1; j < pts.length - 1; j++) {
+            for (let k = j + 1; k < pts.length; k++) {
+                if ( isClose(vector.dist(pts[i], pts[j]), edgeLen) &&
+                     isClose(vector.dist(pts[i], pts[k]), edgeLen) &&
+                     isClose(vector.dist(pts[j], pts[k]), edgeLen) ) {
+                    faces.push([i, j, k]);
+                }
+            }
+        }
+    }
+
+    // Build up the pentagonal faces.
+    function findPtsInPlane(v, c) {
+        // This returns an array of indexes i in pts so that
+        // <pts[i], v> = c.
+        let indexes = [];
+        for (let i in pts) {
+            if (isClose(vector.dot(v, pts[i]), c)) {
+                indexes.push(i);
+            }
+        }
+        return indexes;
+    }
+    let c = phi * phi / 2;
+    for (let c1 = 0; c1 < 3; c1++) {
+        let c2 = (c1 + 1) % 3;
+        let c3 = (c1 + 2) % 3;
+        for (let s1 = -1; s1 <= 1; s1 += 2) {
+            for (let s2 = -1; s2 <= 1; s2 += 2) {
+                let v = [0, 0, 0];
+                v[c1] = s1 * phi / 2;
+                v[c2] = s2 / 2;
+                faces.push(findPtsInPlane(v, c));
+            }
+        }
+    }
+
+    return [pts, lines, faces];
+}
 
 
 // This expects `pts` to be a list of xyz arrays, and labels to be a

@@ -11,7 +11,14 @@
 \usepackage[paperheight=9in,paperwidth=6in]{geometry}
 
 
+%\usepackage{adjustbox}
+%\usepackage{tabularray}
 \usepackage{graphicx}
+%\usepackage{cellspace}
+%\setlength\cellspacetoplimit{20pt}
+%\setlength\cellspacebottomlimit{20pt}
+
+\newcommand\cincludegraphics[2][]{\raisebox{-0.4\height}{\includegraphics[#1]{#2}}}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -22,6 +29,7 @@
 \usepackage{refcount}
 \usepackage{gensymb}
 \usepackage{tikz}
+\usepackage{array}
 \usetikzlibrary{positioning}
 
 \hypersetup{
@@ -97,11 +105,7 @@
 
 \begin{document}
 
-{\bf Notes on Truth}
-
-Tyler Neylon
-
-\bigskip
+\vfil
 
 This book explores the main question: {\em What is truth?}
 
@@ -130,6 +134,42 @@ observations that elucidate the nature of truth.
 These observations provide the basis for a
 perspective on what truth is, which I'll summarize
 before we part ways.
+
+\vfil
+\pagebreak
+
+\newcommand{\rowskip}{1.2cm}
+\newcommand{\imgh}{1.6cm}
+
+\begin{center}
+    \small
+    %\begin{tabular}{>{\raggedleft\arraybackslash}p{3.7cm}cl}
+    \begin{tabular}{p{4.2cm}c>{\em}r}
+        \multicolumn{3}{c}{\bf A map of our journey} \\[0.1cm]
+        \hline \\[0.2cm]
+        \S 1 Pandora's Curiosity &
+        \cincludegraphics[height=\imgh]{img/tetrahedron.png} &
+        What is truth? \\[\rowskip]
+        \S 2 Definitions of Truth &
+        \cincludegraphics[height=\imgh]{img/octahedron.png} &
+        How can we describe truth? \\[\rowskip]
+        \S 3 Inventions &
+        \cincludegraphics[height=\imgh]{img/cuboctahedron.png} &
+        Is truth discovered? \\[\rowskip]
+        \S 4 What Ideas Are &
+        \cincludegraphics[height=\imgh]{img/octahedron.png} &
+        What is truth made of? \\[\rowskip]
+        \S 5 Ignorance and\newline Omniscience &
+        \cincludegraphics[height=\imgh]{img/dodecahedron.png} &
+        What does truth depend on? \\[\rowskip]
+        \S 6 The Fuzzy Edges of Thought &
+        \cincludegraphics[height=\imgh]{img/icosidodecahedron.png} &
+        How objective is truth? \\[\rowskip]
+        \S 7 The Foundation of Human Knowledge &
+        \cincludegraphics[height=\imgh]{img/icosahedron.png} &
+        How do we relate to truth? \\[\rowskip]
+    \end{tabular}
+\end{center}
 
 \chapter{Pandora's Curiosity}
 

@@ -213,6 +213,24 @@ export function getIcosahedronPtsLinesFaces() {
                      isClose(vector.dist(pts[i], pts[k]), edgeLen) &&
                      isClose(vector.dist(pts[j], pts[k]), edgeLen) ) {
                     faces.push([i, j, k]);
+
+                    // This is temporary code that I'm leaving around in case
+                    // it's useful in the future. It can be helpful to
+                    // understand the face equations.
+                    if (false) {
+                        let v = vector.cross(
+                            vector.sub(pts[i], pts[j]),
+                            vector.sub(pts[k], pts[j])
+                        );
+                        console.log(v);
+                        console.log(vector.dot(pts[i], v));
+                        console.log(vector.dot(pts[j], v));
+                        console.log(vector.dot(pts[k], v));
+                    }
+                    // After running this, I see the face equations
+                    // 2 * (+-1, +-1, +-1), 2 * (0, +-phi, +-1/phi),
+                    // dot prod = 2 * phi^2.
+
                 }
             }
         }
@@ -342,6 +360,23 @@ export function getIcosidodecahedronPtsLinesFaces() {
                      isClose(vector.dist(pts[i], pts[k]), edgeLen) &&
                      isClose(vector.dist(pts[j], pts[k]), edgeLen) ) {
                     faces.push([i, j, k]);
+
+                    // This is temporary code that I'm leaving around in case
+                    // it's useful in the future. It can be helpful to
+                    // understand the face equations.
+                    if (false) {
+                        let v = vector.cross(
+                            vector.sub(pts[i], pts[j]),
+                            vector.sub(pts[k], pts[j])
+                        );
+                        console.log(v);
+                        console.log(vector.dot(pts[i], v));
+                        console.log(vector.dot(pts[j], v));
+                        console.log(vector.dot(pts[k], v));
+                    }
+                    // After running this, I see the face equations
+                    // 2 * (+-1, +-1, +-1), 2 * (0, +-phi, +-1/phi),
+                    // dot prod = 2 * phi^2.
                 }
             }
         }

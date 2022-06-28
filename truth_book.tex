@@ -10,6 +10,17 @@
 \documentclass[9pt, twoside]{book}
 \usepackage[paperheight=9.25in,paperwidth=6.125in]{geometry}
 
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
+
+\setlength{\voffset}{0.125in}
+\setlength{\textheight}{6.846in}
+
+\makeatletter
+\def\convertto#1#2{\strip@pt\dimexpr #2*65536/\number\dimexpr 1#1}
+\makeatother
 
 %\usepackage{adjustbox}
 %\usepackage{tabularray}
@@ -142,6 +153,31 @@ Notes on Truth}
 \vspace{0.5in}
 \rightline{Tyler Neylon}
 %2\vfill
+
+% Below is some code I had used temporarily
+% to inspect dimensions.
+\iffalse
+
+voffset:
+\convertto{in}{\the\voffset} in
+
+textheight:
+\convertto{in}{\the\textheight} in
+
+footskip:
+\convertto{in}{\the\footskip} in
+
+topmargin:
+\convertto{in}{\the\topmargin} in
+
+headheight:
+\convertto{in}{\the\headheight} in
+
+headsep:
+\convertto{in}{\the\headsep} in
+
+\fi
+
 
 \newpage
 

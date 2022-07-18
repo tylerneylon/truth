@@ -44,6 +44,8 @@
 \usepackage{xcolor}
 \usetikzlibrary{positioning}
 
+\usepackage{luacode}
+
 \usepackage{fontspec}
 \newcommand{\myfont}{Gentium Plus}
 %\newcommand{\myfont}{et-book}
@@ -138,19 +140,24 @@
 \fancyput(2.0625in,-3.625in){%
 \setlength{\unitlength}{1in}\fancyoval(6,9)}
 
+% I'm leaving this here for future reference.
+\iffalse
 \thispagestyle{empty}
 \phantom{.}
 \newpage
-
-\thispagestyle{empty}
-\phantom{.}
-\newpage
+\fi
 
 \thispagestyle{empty}
 \null\vspace{1in}
+
+
 \rightline{\Huge
 Notes on Truth}
-\vspace{0.5in}
+
+\noindent
+\rule{\textwidth}{1pt}
+
+%\vspace{0.5in}
 \rightline{Tyler Neylon}
 %2\vfill
 
@@ -182,7 +189,54 @@ headsep:
 \newpage
 
 \thispagestyle{empty}
-\phantom{.}
+\null\vspace{5in}
+
+\noindent
+This printing is v0.1 of this book. \\
+It was compiled on
+\begin{luacode*}
+    function get7digits(yday)
+        local digits = {}
+        while yday > 0 do
+            digits[#digits + 1] = yday % 7
+            yday = math.floor(yday / 7)
+        end
+        return digits
+    end
+
+    today = os.date('*t')
+    revdigits = get7digits(today.yday - 1)
+
+    digits = {}
+    for i = #revdigits, 1, -1 do
+        digits[#digits + 1] = revdigits[i]
+    end
+
+    local str = table.concat(digits) .. '.' .. today.year .. ' ('
+    str = str .. os.date('%B %d')
+
+    local suffix
+    if today.day == 1 or today.day == 21 or today.day == 31 then
+        suffix = 'st'
+    elseif today.day == 2 or today.day == 22 then
+        suffix = 'nd'
+    elseif today.day == 3 or today.day == 23 then
+        suffix = 'rd'
+    else
+        suffix = 'th'
+    end
+    str = str .. '$^\\text{' .. suffix .. '}$' .. ', ' .. today.year .. ') '
+
+    tex.print(str)
+\end{luacode*}
+\ in Berkeley, California.
+
+\medskip
+
+\noindent
+The \TeX\ source and sources for the original images in this book
+can be found at {\tt https://github.com/tylerneylon/truth}.
+
 \newpage
 
 \setcounter{page}{1}
@@ -264,6 +318,9 @@ the nuanced nature of our world, and of our own minds.
 
 I'll start by motivating our investigation of truth ---
 let's see how this exploration can be useful.
+
+% XXX
+% \iffalse
 
 When I was a teenager, I learned {\em the scientific method} as a way to
 learn about the world -- to learn what is true.
@@ -3416,6 +3473,9 @@ Here they are:
 \newpage\phantom{.}
 \newpage\phantom{.}
 \newpage\phantom{.}
+
+% XXX
+% \fi
 
 \end{document}  
 

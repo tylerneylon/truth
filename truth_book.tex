@@ -44,6 +44,28 @@
 \usepackage{xcolor}
 \usetikzlibrary{positioning}
 
+% \let\Chaptermark\chaptermark
+% \def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
+% \let\Sectionmark\sectionmark
+% \def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
+% \let\Subsectionmark\subsectionmark
+% \def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
+% \let\Subsubsectionmark\subsubsectionmark
+% \def\subsubsectionmark#1{\def\Subsubsectionname{#1}\Subsubsectionmark{#1}}
+
+% Set up the header and footers.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+% \fancyhead[RE,LO]{Guides and tutorials}
+
+\renewcommand{\chaptermark}[1]{%
+\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
 \usepackage{luacode}
 
 \usepackage{fontspec}
@@ -245,6 +267,7 @@ This book uses the font \myfont.
 
 \newpage
 
+\thispagestyle{empty}
 \setcounter{page}{1}
 
 \topskip0pt
@@ -285,9 +308,10 @@ the nuanced nature of our world, and of our own minds.
 \vspace*{\fill}
 \pagebreak
 
+\thispagestyle{empty}
 \newcommand{\rowskip}{1.2cm}
 \newcommand{\imgh}{1.2cm}
-\newcommand{\graydots}{{\color{lightgray}\dotfill}}
+\newcommand{\graydots}{{\color{gray}\dotfill}}
 
 \begin{center}
     \small
@@ -295,8 +319,8 @@ the nuanced nature of our world, and of our own minds.
     \begin{tabular}[t]{p{3.8cm}c>{\em}r}
         \multicolumn{3}{c}{\bf A Map of Our Journey} \\[0.1cm]
         \hline \\%
-        \noindent{\color{lightgray}Section} & & {\color{lightgray}Key Question} \\[0.2cm]
-        Pandora's Curiosity\graydots &
+        \noindent{\color{gray}Section} & & {\color{gray}Key Question} \\[0.2cm]
+        Pandora's Curiosity{\graydots} &
         \cincludegraphics[height=\imgh]{img/tetrahedron.png} &
         \graydots What is truth? \\[\rowskip]
         Definitions of Truth\graydots &

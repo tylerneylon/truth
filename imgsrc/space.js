@@ -36,6 +36,10 @@ ctx.mode = 'spinning';  // This can also be 'dragging' or 'paused'.
 ctx.rotateMat = matrix.eye(4);
 ctx.transMat  = matrix.eye(4);
 
+ctx.fgStrokeWidth = 3;
+ctx.bgStrokeWidth = 2;
+ctx.bgStrokeDasharray = '1,5,1,8';
+
 // This determines the axis of rotation.
 // By default, the object rotates around the x-axis.
 // You can make the shape rotate around the unit vector v by providing here
@@ -911,11 +915,11 @@ export function updatePoints() {
         // polygon.setAttribute('stroke-linecap', 'round');
         if (isHidden) {
             polygon.setAttribute('stroke', '#555');
-            polygon.setAttribute('stroke-width', 1);
-            polygon.setAttribute('stroke-dasharray', '1,5,1,8');
+            polygon.setAttribute('stroke-width', ctx.bgStrokeWidth);
+            polygon.setAttribute('stroke-dasharray', ctx.bgStrokeDasharray);
         } else {
             polygon.setAttribute('stroke', '#000');
-            polygon.setAttribute('stroke-width', 3);
+            polygon.setAttribute('stroke-width', ctx.fgStrokeWidth);
             // polygon.setAttribute('stroke-dasharray', '5,5');
             polygon.removeAttribute('stroke-dasharray');
         }

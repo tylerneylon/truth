@@ -10,6 +10,11 @@
 \documentclass[9pt, twoside]{book}
 \usepackage[paperheight=9.25in,paperwidth=6.125in]{geometry}
 
+\newlength{\mytextsize}
+\makeatletter
+  \setlength{\mytextsize}{\f@size pt}
+\makeatother
+
 \let\tmp\oddsidemargin
 \let\oddsidemargin\evensidemargin
 \let\evensidemargin\tmp
@@ -53,14 +58,18 @@
 % \let\Subsubsectionmark\subsubsectionmark
 % \def\subsubsectionmark#1{\def\Subsubsectionname{#1}\Subsubsectionmark{#1}}
 
+\newcommand{\chaplogo}{}
+
 % Set up the header and footers.
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[RE]{\leftmark}
+\fancyhead[RE]{\leftmark\quad\raisebox{-1pt}{\chaplogo}}
 \fancyhead[LO]{\rightmark}
 % \fancyhead[RE,LO]{Guides and tutorials}
+\newlength{\logoheight}
+\setlength{\logoheight}{0.9\mytextsize}
 
 \renewcommand{\chaptermark}[1]{%
 \markboth{\chaptername\ \thechapter.\ #1}{}}
@@ -321,29 +330,30 @@ the nuanced nature of our world, and of our own minds.
         \hline \\%
         \noindent{\color{gray}Section} & & {\color{gray}Key Question} \\[0.2cm]
         Pandora's Curiosity{\graydots} &
-        \cincludegraphics[height=\imgh]{img/tetrahedron.png} &
+        \cincludegraphics[height=\imgh]{img/tetrahedron2.png} &
         \graydots What is truth? \\[\rowskip]
         Definitions of Truth\graydots &
-        \cincludegraphics[height=\imgh]{img/octahedron.png} &
+        \cincludegraphics[height=\imgh]{img/octahedron2.png} &
         \hbox to1em{\graydots} How can we describe truth? \\[\rowskip]
         Inventions\graydots &
-        \cincludegraphics[height=\imgh]{img/cuboctahedron.png} &
+        \cincludegraphics[height=\imgh]{img/cuboctahedron2.png} &
         \graydots Is truth discovered? \\[\rowskip]
         What Ideas Are\graydots &
-        \cincludegraphics[height=\imgh]{img/cube.png} &
+        \cincludegraphics[height=\imgh]{img/cube2.png} &
         \graydots What is truth made of? \\[\rowskip]
         Ignorance and\graydots\newline Omniscience &
-        \cincludegraphics[height=\imgh]{img/dodecahedron.png} &
+        \cincludegraphics[height=\imgh]{img/dodecahedron2.png} &
         \graydots What does truth depend on? \\[\rowskip]
         The Fuzzy Edges\graydots\newline of Thought &
-        \cincludegraphics[height=\imgh]{img/icosidodecahedron.png} &
+        \cincludegraphics[height=\imgh]{img/icosidodecahedron2.png} &
         \graydots How objective is truth? \\[\rowskip]
         The Foundation of\graydots\newline Human Knowledge &
-        \cincludegraphics[height=\imgh]{img/icosahedron.png} &
+        \cincludegraphics[height=\imgh]{img/icosahedron2.png} &
         \graydots How do we relate to truth? \\[\rowskip]
     \end{tabular}
 \end{center}
 
+\renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/tetrahedron2_thick.png}}
 \chapter{Pandora's Curiosity}
 
 I'll start by motivating our investigation of truth ---
@@ -414,6 +424,7 @@ learn what's true?}, you find the
 Pandora's box that is {\em What is truth?} This is the box we'll open.
 
 \chapter{Definitions of Truth}\label{s2}
+\renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/octahedron2_thick.png}}
 
 \section{Correspondence Truth}
 
@@ -1259,6 +1270,7 @@ The remainder of this
 book explores the relationship between ideas and believers.
 
 \chapter{Inventions}
+\renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/cuboctahedron2_thick.png}}
 
 A simple model of the world breaks all things down into {\em inventions} and
 {\em natural objects}.
@@ -1454,6 +1466,7 @@ each other can only exist together,
 rather than individually.
 
 \chapter{What Ideas Are}
+\renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/cube2_thick.png}}
 
 In order to better understand the relationships between alternative
 notions (up vs down, red vs orange, true vs false), it's
@@ -1807,6 +1820,7 @@ This relationship between truth and ignorance is worth further exploration.
 
 
 \chapter{Ignorance and Omniscience}
+\renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/dodecahedron2_thick.png}}
 
 Ideas depend on questions,
 and questions assume ignorance,
@@ -2303,6 +2317,7 @@ whether the test succeeds depends on things we have not accounted
 for.
 
 \chapter{The Fuzzy Edges of Thought}
+\renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/icosidodecahedron2_thick.png}}
 
 If there is a theme to this book, it's that truth isn't as
 objective and absolute as we usually consider it to be.
@@ -2725,6 +2740,7 @@ to the other, then we are still making a choice. Even in this theoretically
 complete and correct view of physics, we are making decisions.
 
 \chapter{The Foundation of Human Knowledge}\label{s7}
+\renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/icosahedron2_thick.png}}
 
 % TODO segue?
 

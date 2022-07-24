@@ -48,6 +48,7 @@
 \usepackage{array}
 \usepackage{xcolor}
 \usetikzlibrary{positioning}
+\usepackage{titlesec}
 
 % \let\Chaptermark\chaptermark
 % \def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
@@ -57,6 +58,27 @@
 % \def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
 % \let\Subsubsectionmark\subsubsectionmark
 % \def\subsubsectionmark#1{\def\Subsubsectionname{#1}\Subsubsectionmark{#1}}
+
+\newcommand{\chapfigureheight}{1in}
+\newcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/tetrahedron2.png}}
+
+% Set up the style of each Chapter's first page.
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Huge\itshape} % format
+{\begin{center}\chapfigure\end{center}\vspace{0.3in}\centering\thechapter} % label
+{0.5ex} % sep
+{
+    %\rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+%\rule{\textwidth}{0.3pt}
+] % after-code
+
 
 \newcommand{\chaplogo}{}
 
@@ -423,6 +445,7 @@ To connect the dots: When you open the door toward answering {\em How can we
 learn what's true?}, you find the
 Pandora's box that is {\em What is truth?} This is the box we'll open.
 
+\renewcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/octahedron2.png}}
 \chapter{Definitions of Truth}\label{s2}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/octahedron2_thick.png}}
 
@@ -1269,6 +1292,7 @@ believers' actions and interpretations.
 The remainder of this
 book explores the relationship between ideas and believers.
 
+\renewcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/cuboctahedron2.png}}
 \chapter{Inventions}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/cuboctahedron2_thick.png}}
 
@@ -1465,6 +1489,7 @@ arguing that pairs of concepts which are alternatives to
 each other can only exist together,
 rather than individually.
 
+\renewcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/cube2.png}}
 \chapter{What Ideas Are}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/cube2_thick.png}}
 
@@ -1819,6 +1844,7 @@ This relationship between truth and ignorance is worth further exploration.
 %
 
 
+\renewcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/dodecahedron2.png}}
 \chapter{Ignorance and Omniscience}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/dodecahedron2_thick.png}}
 
@@ -2316,6 +2342,7 @@ And without full contextual awareness, our tests of ideas are noisy ---
 whether the test succeeds depends on things we have not accounted
 for.
 
+\renewcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/icosidodecahedron2.png}}
 \chapter{The Fuzzy Edges of Thought}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/icosidodecahedron2_thick.png}}
 
@@ -2739,6 +2766,7 @@ that one perspective is superior
 to the other, then we are still making a choice. Even in this theoretically
 complete and correct view of physics, we are making decisions.
 
+\renewcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/icosahedron2.png}}
 \chapter{The Foundation of Human Knowledge}\label{s7}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/icosahedron2_thick.png}}
 

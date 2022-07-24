@@ -7,3 +7,4 @@ __pycache__/
 pull
 push
 indesign_files/
+.ipynb_checkpoints/

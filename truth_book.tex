@@ -3411,7 +3411,8 @@ What is truth?
 
 \pagebreak
 
-\pagestyle{empty}
+\renewcommand{\chaplogo}{}
+\renewcommand{\leftmark}{Afterword\kern -1em}
 {\huge Afterword}
 \bigskip
 
@@ -3462,12 +3463,15 @@ If you re-read the book, I encourage you to keep an eye out for my attempt at
 philosophical humility, such as in my choices of words (arguments,
 observations), or in my framing of ideas as perspectives, rather than inevitable
 conclusions.
+
+\centerline{
 Everything I say could be wrong --- though it could also be effective.
+}
 
 
 \pagebreak
 
-\pagestyle{empty}
+\renewcommand{\rightmark}{Glossary}
 {\huge Glossary}
 \bigskip
 
@@ -3515,6 +3519,7 @@ Here they are:
 
 \pagebreak
 
+\renewcommand{\leftmark}{Observations\kern -1em}
 {\huge Observations}
 
 \setcounter{obs}{0}
@@ -3569,8 +3574,8 @@ Here they are:
     \obsten
 \end{obs}
 
-\pagestyle{empty}
 \newpage
+\pagestyle{empty}
 \phantom{.}
 \vspace*{\fill}
 \phantom{.}

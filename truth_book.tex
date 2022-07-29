@@ -49,6 +49,7 @@
 \usepackage{xcolor}
 \usetikzlibrary{positioning}
 \usepackage{titlesec}
+\usepackage{emptypage}
 
 % \let\Chaptermark\chaptermark
 % \def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
@@ -246,7 +247,7 @@ headsep:
 \null\vspace{5in}
 
 \noindent
-This printing is v0.1 of this book. \\
+This printing is v0.2 of this book. \\
 It was compiled on
 \begin{luacode*}
     function get7digits(yday)
@@ -448,9 +449,9 @@ I won't try to answer this question
 in this book, though I'll make observations
 that may serve as the basis for its answer.
 Rather, the above query serves as a key motivator
-for our true focus, the nature of truth itself.
-We must understand truth itself before
-we can truly understand which ideas are true.
+for our real focus --- the nature of truth itself.
+We must understand truth before
+we can understand which ideas are true.
 
 To connect the dots: When you open the door toward answering {\em How can we
 learn what's true?}, you find the
@@ -469,8 +470,8 @@ Perhaps the most traditional approach is an old idea called
 as I'm aware,
 in Aristotle's {\em Metaphysics}\/:
 
-\begin{defn}[Correspondence Truth]\label{d1}
-    An idea is true when it corresponds to reality.
+\begin{defn}[Correspondence Truth]\label{d1}\phantom{.}\\
+    \centerline{An idea is true when it corresponds to reality.}
 \end{defn}
 
 I don't think this is a good definition.
@@ -540,6 +541,8 @@ Rather, I'm saying that we might find an improved definition of truth if we take
 a careful look at how we decide something is true or false.
 This is analogous to complaining that a definition such as ``a number is an
 element of the set of numbers'' can be correct but unhelpful.
+
+\pagebreak
 
 Learning from the faults in the definition of correspondence truth,
 we see that a good definition:
@@ -816,6 +819,8 @@ While no person or group can decide the value of $\pi$, the Unicode Consortium
 can decide which emoji are included in Unicode, and therefore available on your
 phone.
 
+\pagebreak
+
 Let's officially define this new kind of truth:
 \begin{defn}[Authoritative Truth]
     An authored idea is true when the party recognized as the authority confirms
@@ -1041,6 +1046,10 @@ if they're not correct by any other definition of truth.
 
 Which definition of truth might be a good benchmark to filter out truly
 good ideas from ones that are persistent yet unhelpful?
+
+\pagebreak
+
+\noindent
 Consider this final definition:
 \begin{defn}[Effective Truth]\label{d8}
     A useful idea is true when someone using it tends to achieve their goals by
@@ -1099,7 +1108,7 @@ Here's the theme of this book:
 Truth is not as straightforward as we'd like it to be.
 It's worth spelling out clearly how we can
 measure {\em degrees of truth} in terms of
-the descriptive/normative viewpoints mentioned earlier:
+the descriptive/normative viewpoints mentioned earlier.
 \begin{itemize}
     \item{} [Descriptive perspective.]
         {\bf Communal ideas are as true as they are
@@ -1241,7 +1250,7 @@ many useful ideas are known to be simplifications or only partially true; and
 will continue to pass all future tests.
 We'll return to those two caveats below.
 
-\scenebreak
+\smallskip  % Given more room, it's nice if this can be a \scenebreak
 
 I'll summarize the above discussion as the second answer in terms
 of choosing among our definitions of truth:
@@ -1399,10 +1408,10 @@ not yet know the rules of physics of our own world.
 In the Game of Life, the word {\em glider} means a particular 
 configuration of cells that moves diagonally across the board, assuming it does
 not encounter another object.
-% 
-% \pagebreak
-% 
-% \noindent
+
+\pagebreak
+
+\noindent
 Here are all the shapes of a glider:
 \begin{center}
 \includegraphics[width=\textwidth]{glider3.png}
@@ -1890,6 +1899,8 @@ be a triangle with three 75\degree\ angles before you learn that all triangles
 must have angles which sum to 180\degree.
 This strange thought experiment is purposefully awkward, and we'll
 explore the awkwardness behind it.
+
+\pagebreak
 
 Here are the three questions:
 \begin{enumerate}
@@ -3248,6 +3259,8 @@ While this book does posit the dependence between
 true ideas and minds, it doesn't refute the reality of truth itself.
 
 \scenebreak
+
+\pagebreak
 
 \noindent
 {\bf Should we never believe an idea is fully true?}

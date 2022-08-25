@@ -181,10 +181,13 @@
     \medskip\centerline{$\dotq\dotq\dotq\dotq\cdot$}\medskip
 }
 
+\usepackage{fancybox}
+\usepackage{changepage}
+
+% From:
+% https://tex.stackexchange.com/questions/588/how-can-i-change-the-margins-for-only-part-of-the-text
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
 \let\endchangemargin=\endlist
-
-\usepackage{fancybox}
 
 \begin{document}
 
@@ -699,7 +702,9 @@ I'll phrase this as:
     When we examine these reasons, we find uncertainty.
 }
 \begin{obs}\label{o1}
+    \begin{center}
     \obsone
+    \end{center}
 \end{obs}
 
 I'm not saying the ideas are always incorrect. I am saying that when we think we
@@ -1140,7 +1145,9 @@ I'll summarize this:
     truthfulness.
 }
 \begin{obs}\label{o2}
+    \begin{center}
     \obstwo
+    \end{center}
 \end{obs}
 
 The concept of effective truth is not new, although as far as I know the
@@ -1470,7 +1477,9 @@ Here's why I'm discussing all of this:
     world.
 }
 \begin{obs}\label{o3}
+    \begin{center}\phantom{.}\\
     \obsthree
+    \end{center}
 \end{obs}
 
 This observation disagrees with the common intuition that truth is
@@ -1562,7 +1571,7 @@ The first connection I want to make is between ideas and answers to questions.
 If an idea tells us some information, then it must distinguish between different
 possibilities. If I say ``I'm having a nice day,'' then I'm distinguishing this
 from the possibilities of having an astounding day or a dog-tired day.
-If there were no other possibilities,
+If there weren't multiple possibilities,
 then there is no information conveyed. If I said
 ``red is red'' without more context,
 it's confusing because it's not clear what
@@ -1579,7 +1588,7 @@ conversation like this:
 There is a question (what is $x$?) with a set ($X$) of possible answers. The
 information content --- the idea being expressed ---
 is an answer to this question ($x=4$). If you say ``My name is Inigo,''
-then you are answering the implicit question ``What is your name?'' whose set of
+then you're answering the implicit question ``What is your name?'' whose set of
 possibilities is the set of all names.
 
 This mathematical analogy is not perfect.
@@ -1788,12 +1797,14 @@ to a goal, and this attachment is unavoidable.
 
 I'll summarize this idea, along with the previous section's ideas, as:
 \newcommand{\obsfour}{
-    Every conscious thought we have is goal-based.
+    Every conscious thought we have is goal-based.\\
     Goal-free conscious %\linebreak
     thoughts are impossible.
 }
 \begin{obs}\label{o4}
+    \begin{center}
     \obsfour
+    \end{center}
 \end{obs}
 
 Here's a diagram summarizing the mental model of ideas used in this
@@ -2285,7 +2296,9 @@ I'll summarize the ideas of this section and the previous one as:
     Thoughts can only be motivated when we have ignorance about them.
 }
 \begin{obs}\label{o5}
+    \begin{center}\phantom{.}\\
     \obsfive
+    \end{center}
 \end{obs}
 
 \section{Dependence on Context}
@@ -2343,7 +2356,9 @@ I'll summarize this as:
     Whether such ideas achieve their goals is context-dependent.
 }
 \begin{obs}\label{o6}
+    \begin{center}
     \obssix
+    \end{center}
 \end{obs}
 
 Consider the idea that water boils at
@@ -2612,7 +2627,9 @@ The conclusion:
     applies in certain cases.
 }
 \begin{obs}\label{o7}
+    \begin{center}
     \obsseven
+    \end{center}
 \end{obs}
 
 This observation refutes the clarity property of many concepts.
@@ -2718,15 +2735,25 @@ to things that may not feel like choices, such as $\pi$.
 
 Since these ideas only make sense when used within a group of people,
 I'll call them {\em
-social ideas}, and summarize the pattern we're seeing as:
+social ideas}, and summarize the pattern we're seeing as the
+following observation.
+
+\pagebreak
+
 \newcommand{\obseight}{
     Most ideas are related to a social goal.
     Social ideas are {\em arbitrary}; it's more important that a group agrees on
     the idea than that a best idea is found to achieve the social goal.
 }
+\begin{adjustwidth}{0.5in}{0.5in}
 \begin{obs}\label{o8}
+    \begin{center}
     \obseight
+    \end{center}
 \end{obs}
+\end{adjustwidth}
+
+\medskip
 
 I'll justify this observation with a simple chain of key definitions:
 
@@ -3033,22 +3060,26 @@ We've seen that our thoughts are often fuzzy, arbitrary, and created practically
 rather than discovered organically. I'll summarize this section as:
 \newcommand{\obsnine}{
 Human knowledge is
-built upon imperfect, fabricated concepts.
+built upon imperfect, fabricated concepts.\\
 Many of our questions, being about imperfect,
 fabricated concepts,
 don't have objectively correct answers.
 }
+\begin{adjustwidth}{0.5in}{0.5in}
 \begin{obs}\label{o9}
+    \begin{center}\phantom{.}\\
     \obsnine
+    \end{center}
 \end{obs}
+\end{adjustwidth}
+
+\medskip
 
 This observation refutes the truth-as-bedrock claim.
 It is not accurate to say that human knowledge is purely founded upon a
 pursuit of pre-existing external truths.
 
 \section{Supertruth}\label{supertruth}
-
-% HERE
 
 Throughout this book, I've been distinguishing between two kinds of intuition
 for truth.
@@ -3151,8 +3182,29 @@ integers $x,y,z,n$:
     \text{If } n>2, \text{ then there are no positive values of }
     x, y, z \text{ with } x^n+y^n=z^n.
 \end{equation}
-This statement is known as Fermat's Last Theorem.
-Suppose you're friends with a well-established mathematician who you've never
+
+% NOTE: I'm grabbing a public domain rock dove illustration from here:
+%       https://ohiohistorycentral.org/w/File:Rock_Dove.jpg
+% Commands I used to add rounded corners:
+%  convert -size 814x766 xc:none \
+%      -draw "roundrectangle 0,0,814,766,80,80" mask.png
+%  convert rockdove.png -matte mask.png -compose DstIn -composite rockdove2.png
+% From:
+% https://stackoverflow.com/a/18992215/3561
+\begin{wrapfigure}{R}{4.3cm}
+    \vspace{-0.45cm}
+    \includegraphics[width=4.3cm]{rockdove2.png}
+    % \captionsetup{labelformat=empty}
+    \footnotesize
+    \begin{changemargin}{0.5cm}{0.5cm}
+        {\em Columba livia}, from John Gould's {\em The Birds of Europe},
+        volume 3.
+    \end{changemargin}
+    \vspace{-0.5cm}
+\end{wrapfigure}
+
+This statement is known as Fermat's Last Theorem.  Suppose you're friends with a
+well-established mathematician who you've never
 known to be wrong, and she reads a proof that (\ref{eq5}) is false.
 She tells you
 the proof is correct.
@@ -3163,23 +3215,6 @@ But this is a contradiction, because
 an example of simultaneously believing things that logically contradict each
 other.
 
-% NOTE: I'm grabbing a public domain rock dove illustration from here:
-%       https://ohiohistorycentral.org/w/File:Rock_Dove.jpg
-% Commands I used to add rounded corners:
-%  convert -size 814x766 xc:none \
-%      -draw "roundrectangle 0,0,814,766,80,80" mask.png
-%  convert rockdove.png -matte mask.png -compose DstIn -composite rockdove2.png
-% From:
-% https://stackoverflow.com/a/18992215/3561
-\begin{wrapfigure}{R}{4cm}
-    \includegraphics[width=4cm]{rockdove2.png}
-    % \captionsetup{labelformat=empty}
-    \footnotesize
-    \begin{changemargin}{0.5cm}{0.5cm}
-        {\em Columba livia}, from John Gould's {\em The Birds of Europe},
-        volume 3.
-    \end{changemargin}
-\end{wrapfigure}
 You might object by saying this is a constructed example, one that most people
 don't
 encounter in their daily lives.
@@ -3208,7 +3243,9 @@ I'll summarize the recent line of thinking:
     instead match the idea of supertruth.
 }
 \begin{obs}\label{o10}
+    \begin{center}\phantom{.}\\
     \obsten
+    \end{center}
 \end{obs}
 Most of the things we do in life are not about careful logical reasoning. If you
 examine all the decisions you make throughout
@@ -3265,8 +3302,6 @@ While this book does posit the dependence between
 true ideas and minds, it doesn't refute the reality of truth itself.
 
 \scenebreak
-
-\pagebreak
 
 \noindent
 {\bf Should we never believe an idea is fully true?}

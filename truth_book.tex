@@ -15,11 +15,6 @@
   \setlength{\mytextsize}{\f@size pt}
 \makeatother
 
-\let\tmp\oddsidemargin
-\let\oddsidemargin\evensidemargin
-\let\evensidemargin\tmp
-\reversemarginpar
-
 \setlength{\voffset}{0.125in}
 \setlength{\textheight}{6.846in}
 
@@ -27,12 +22,7 @@
 \def\convertto#1#2{\strip@pt\dimexpr #2*65536/\number\dimexpr 1#1}
 \makeatother
 
-%\usepackage{adjustbox}
-%\usepackage{tabularray}
 \usepackage{graphicx}
-%\usepackage{cellspace}
-%\setlength\cellspacetoplimit{20pt}
-%\setlength\cellspacebottomlimit{20pt}
 
 \newcommand\cincludegraphics[2][]{\raisebox{-0.4\height}{\includegraphics[#1]{#2}}}
 
@@ -50,15 +40,6 @@
 \usetikzlibrary{positioning}
 \usepackage{titlesec}
 \usepackage{emptypage}
-
-% \let\Chaptermark\chaptermark
-% \def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
-% \let\Sectionmark\sectionmark
-% \def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
-% \let\Subsectionmark\subsectionmark
-% \def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
-% \let\Subsubsectionmark\subsubsectionmark
-% \def\subsubsectionmark#1{\def\Subsubsectionname{#1}\Subsubsectionmark{#1}}
 
 \newcommand{\chapfigureheight}{1in}
 \newcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/tetrahedron2.png}}
@@ -82,6 +63,11 @@
 
 
 \newcommand{\chaplogo}{}
+
+\geometry{verbose,
+lmargin=0.75in,
+rmargin=0.75in
+}
 
 % Set up the header and footers.
 \usepackage{fancyhdr}
@@ -241,13 +227,19 @@ headheight:
 headsep:
 \convertto{in}{\the\headsep} in
 
+oddsidemargin:
+\convertto{in}{\the\oddsidemargin} in
+
+evensidemargin:
+\convertto{in}{\the\evensidemargin} in
+
 \fi
 
 
 \newpage
 
 \thispagestyle{empty}
-\null\vspace{5in}
+\null\vspace{4.6in}
 
 \noindent
 This printing is v0.3 of this book. \\

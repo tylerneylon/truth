@@ -175,6 +175,7 @@ rmargin=0.75in
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
 \let\endchangemargin=\endlist
 
+\pagenumbering{roman}
 \begin{document}
 
 % TMP XXX
@@ -303,7 +304,6 @@ at\newline
 \newpage
 
 \thispagestyle{empty}
-\setcounter{page}{1}
 
 \topskip0pt
 \vspace*{\fill}
@@ -386,6 +386,9 @@ the nuanced nature of our world, and of our own minds.
 
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/tetrahedron2_thick.png}}
 \chapter{Pandora's Curiosity}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
 
 I'll start by motivating our investigation of truth.
 Let's see how this exploration can be useful.

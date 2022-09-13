@@ -125,11 +125,10 @@ tmargin=1in
 \newtheorem*{question*}{Question}
 \newtheorem{idea}{Idea}
 \newtheorem{postidea}{Post Idea}
-\newtheorem*{defn}{Definition}
 \newtheorem{ans}{Answer}
 \newtheorem{prop}{Property}
 \newtheorem{propn}{Proposition}
-\newtheorem*{claim}{Claim}
+%\newtheorem*{claim}{Claim}
 \newtheorem{obs}{Observation}
 
 \newtheoremstyle{argtstyle} % name
@@ -144,6 +143,20 @@ tmargin=1in
 
 \theoremstyle{argtstyle}
 \newtheorem*{argt}{Argument}
+
+\newtheoremstyle{defstyle}  % name
+    {\topsep}               % Space above
+    {\topsep}               % Space below
+    {\itshape}              % Body font
+    {}                      % Indent amount
+    {\bfseries}             % Theorem head font
+    {.}           % Punctuation after theorem head
+    {0.5em}                 % Space after theorem head
+    {\thmname{#1}\thmnumber{ #2}\thmnote{\mdseries\ (#3)}}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{defstyle}
+\newtheorem*{claim}{Claim}
+\newtheorem*{defn}{Definition}
 
 % \newtheorem*{innerargt}{Argument}
 % \newenvironment{argt}[1]
@@ -551,7 +564,7 @@ a careful look at how we decide something is true or false.
 This is analogous to complaining that a definition such as ``a number is an
 element of the set of numbers'' can be correct but unhelpful.
 
-\pagebreak
+% \pagebreak
 
 Learning from the faults in the definition of correspondence truth,
 we see that a good definition:
@@ -806,31 +819,32 @@ Han first or nearly simultaneously. So the truth of the claim is not
 obvious.
 
 I don't think the claim that Han shot first
-can be verified to the degree we can verify
+can be verified to the degree we can verify that
 water boils at 100\degree C.
 It's about a fictional event in a widely-known story.
-For many narrative-based questions, we could simply ask the author since they
+For novel-based questions, we could simply ask the writer since they
 have a kind of authority over what ``really happened'' in the story they
 created. But in this case, the story of {\em Star Wars} has effectively
 graduated to a level of American mythology, in which case the authorship of a
 single living person (George Lucas, in this case) is less meaningful.
 The ambiguity of ownership causes some ambiguity of truth;
-this shows that our belief in some ideas depends on an agreed-upon author.
+this shows that our belief in some ideas depends on an agreed-upon creator.
 
 Let's call the claim that Han shot first
 an {\em authored idea} --- it's an idea whose
 truth depends on decisions by an author.
 This applies to ideas from fictional stories with an agreed-upon
-author, but it also applies to things such as laws or standards, which are often
-decided by groups of specialists. For example, the default text encoding of the
-web is to use Unicode code points, which provide a way to encode most of the
-world's writing systems. The Unicode Consortium is an organization that's
+creator, but it also applies to things such as laws or standards, which are
+often decided by groups of specialists. For example, on the web,
+the default mapping between
+characters and numbers used to represent those characters
+is defined by a standard called Unicode.
+The Unicode Consortium is an organization that's
 recognized as deciding all the details of Unicode.
 While no person or group can decide the value of $\pi$, the Unicode Consortium
 can decide which emoji are included in Unicode, and therefore available on your
-phone.
-
-\pagebreak
+phone. Shared awareness of decisions made about these abstract notions provides
+a kind of truth to ideas about emojis, or about Luke Skywalker.
 
 Let's officially define this new kind of truth:
 \begin{defn}[Authoritative Truth]
@@ -936,9 +950,9 @@ but
 when you examine the history of a concept,
 you often find more sense
 than you might expect. Newts were once ewts; when people saw one they would tell
-their friend they saw ``an ewt,'' which was so easy to confuse with ``a newt''
+someone they saw ``an ewt,'' which was so easy to confuse with ``a newt''
 that the word changed. People once considered the Mediterranean Sea to be the
-sea in the middle (medi) of the earth (terran).
+sea in the middle (medi) of the land, or Earth (terra).
 
 In the examples above, we're seeing ideas, like words, that live in multitudes
 among communities --- such as French words in France, or mathematical lingo
@@ -1057,8 +1071,6 @@ if they're not correct by any other definition of truth.
 
 Which definition of truth might be a good benchmark to filter out truly
 good ideas from ones that are persistent yet unhelpful?
-
-\pagebreak
 
 \noindent
 Consider this final definition:
@@ -1306,7 +1318,7 @@ that effective ideas give us the expected results when tested. But people tend
 to have additional intuitions about truth --- in
 particular, I'll highlight two properties that I'll call
 P1 and P2:
-\begin{claim}[Spoiler: I will disagree with this.]\label{c7}
+\begin{claim}[Spoiler: I will disagree with this]\label{c7}
     An idea being true is:
 \begin{itemize}
     \item{} {\normalfont [{\bf P1.}]}
@@ -1422,7 +1434,7 @@ In the Game of Life, the word {\em glider} means a particular
 configuration of cells that moves diagonally across the board, assuming it does
 not encounter another object.
 
-\pagebreak
+% \pagebreak
 
 \noindent
 Here are all the shapes of a single glider across 5 time steps:
@@ -3444,7 +3456,7 @@ There is a part of us that doesn't want our place in the universe to
 shrink by admitting our lives are based on uncertainty, and that we invent
 what we believe.
 We want to be right, and we want to be special.
-Yet there's beauty in being just
+Yet there's beauty in {\em just being},
 like anything else in the world.
 With the smallest shift in perspective ---
 an acceptance of humility ---

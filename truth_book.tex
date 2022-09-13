@@ -704,9 +704,16 @@ is a lawyer's closing statement in a courtroom.
 The only difference is that the audience has a higher --- but still ultimately
 subjective --- standard for what will convince them.
 
+
+% NOTE: This is meant to be a single paragraph, but I'm splitting it up
+%       to appease the gods of page breaks.
 There is uncertainty not only for mathematical truth, but for
 every other kind of truth we'll consider, as I'll argue throughout
 the rest of this section.
+
+\pagebreak
+
+\noindent
 I'll phrase this as:
 
 \newcommand{\obsone}{
@@ -769,8 +776,8 @@ called Conway's Game of Life, named for its inventor, John Conway.
 The Game of Life takes place in a grid of square cells, each of which is either
 dead or alive at any given point in time. The grid evolves over
 time. Each cell's status (alive or dead) is determined by the status of its 8
-surrounding cells from the previous time step. This illustration fully
-describes all of the evolution rules:
+surrounding cells from the previous time step. The following illustration
+fully describes all of the evolution rules.
 \begin{center}
 \includegraphics[width=\textwidth]{gameoflife3.png}
 \end{center}
@@ -992,10 +999,10 @@ You might say that these religious beliefs are authoritative truths.
 But believers are likely to disagree, saying that the authority of a
 religion derives from it being true, and not the other way around.
 
-Just as there is uncertainty in the previous kinds of truth, there is
+Just as there's uncertainty in the previous kinds of truth, there's
 uncertainty here.
-Indeed, there are many incompatible religious beliefs, so they simply
-cannot all be correct at the same time.
+Indeed, there are many incompatible religious beliefs, so they
+can't all be correct at once.
 In other words, it's perfectly possible for an idea to persist in a community
 even when that idea doesn't meet our intuition for being true.
 
@@ -1343,6 +1350,9 @@ believers.
 \chapter{Inventions}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/cuboctahedron2_thick.png}}
 
+% This is a horrible hacky way to improve an upcoming page break.
+\vspace{0.7in}
+
 A simple model of the world breaks all things down into {\em inventions} and
 {\em natural objects}.
 A natural object is something that existed independently in the
@@ -1434,7 +1444,7 @@ In the Game of Life, the word {\em glider} means a particular
 configuration of cells that moves diagonally across the board, assuming it does
 not encounter another object.
 
-% \pagebreak
+\pagebreak
 
 \noindent
 Here are all the shapes of a single glider across 5 time steps:
@@ -1543,6 +1553,9 @@ rather than individually.
 \renewcommand{\chapfigure}{\includegraphics[height=\chapfigureheight]{img/cube2.png}}
 \chapter{What Ideas Are}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/cube2_thick.png}}
+
+% Hack to help page breaks.
+\vspace{0.7in}
 
 In order to better understand the relationships between alternative
 notions (up vs down, red vs orange, true vs false), it's
@@ -1901,6 +1914,9 @@ This relationship between truth and ignorance is worth further exploration.
 \chapter{Ignorance and Omniscience}
 \renewcommand{\chaplogo}{\includegraphics[height=\logoheight]{img/dodecahedron2_thick.png}}
 
+% This is just to improve the vertical spacing on this page.
+\vspace{0.2in}
+
 Ideas depend on questions,
 and questions assume ignorance,
 even if imagined.
@@ -2095,6 +2111,8 @@ of the world. Perhaps you don't know all possible mathematical truths, or all
 other possible worlds. So this is a certain kind of omniscience. Let's call it
 {\em physical omniscience}.
 
+\pagebreak
+
 Now someone asks you a {\em physical question}, by which I mean
 a question about the physical state of the world.
 They point out a glider at a certain time step and
@@ -2156,6 +2174,8 @@ number $k$ would indicate the starting conditions of the world; everything else
 follows. No matter what the rules of physics are, we can suppose there is some
 way to encode the state of the universe across all time, and the number
 $k$ can be this encoding.
+
+\pagebreak
 
 Building on the idea of encoding the world in a single number,
 I'm going to pose a strange-seeming mathematical question whose purpose is
@@ -2220,6 +2240,8 @@ to earlier goals (a) and (b) of this thought experiment:
         Out of curiosity, are there any fun mathematical patterns to questions
         like this?
 \end{enumerate}
+
+\pagebreak
 
 Now consider the similarities between the following questions:
 \begin{itemize}
@@ -2748,8 +2770,6 @@ I'll call them {\em
 social ideas}, and summarize the pattern we're seeing as the
 following observation.
 
-\pagebreak
-
 \newcommand{\obseight}{
     Most ideas are related to a social goal.
     Social ideas are {\em arbitrary}; it's more important that a group agrees on
@@ -2859,6 +2879,10 @@ complete and correct view of physics, we are making decisions.
 Let's look at the role truth plays in our model of the world, and in
 ourselves.
 
+% This is entirely to help avoid awkward line breaks in the text
+% immediately below.
+\newcommand{\myspace}{}
+
 Next are some candidate properties for truth that feel intuitively correct.
 These include properties P1 and P2 from \S\ref{c7}; property
 P3 is new:
@@ -2874,7 +2898,7 @@ This book argues against all of these intuitions:
 both goals (observation \ref{o4}) and ignorance (observation \ref{o5}); many
 ideas are based on accidents of human history (observation \ref{o8}).
 \item{} [Refuting P2] The
-truth of many ideas depends on how we test it (observation \ref{o6}).
+truth of many ideas depends on how we test it (obs. \ref{o6}).
 \item{} [Refuting P3] An answer to a question can only have a partial degree of truth to
 it
 (observation \ref{o2}), and many questions are about cases where

@@ -258,7 +258,7 @@ evensidemargin:
 \null\vspace{5.2in}
 
 \noindent
-This printing is v0.4 of this book. \\
+This printing is v1.0 of this book. \\
 It was compiled on
 \begin{luacode*}
     function get7digits(yday)
@@ -279,7 +279,7 @@ It was compiled on
     end
 
     local str = table.concat(digits) .. '.' .. today.year .. ' ('
-    str = str .. os.date('%B %d')
+    str = str .. os.date('%B %d'):gsub(' 0', ' ')
 
     local suffix
     if today.day == 1 or today.day == 21 or today.day == 31 then
